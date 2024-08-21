@@ -39,32 +39,18 @@
   </head>
   <body>
     <header>
-      <div id="top-header">
-          <div class="container">
-              <ul class="header-links pull-left">
-                  <li><a href="#"><i class="fa fa-phone"></i> +021-95-51-84</a></li>
-                  <li><a href="#"><i class="fa fa-envelope-o"></i> email@email.com</a></li>
-                  <li><a href="#"><i class="fa fa-map-marker"></i> 1734 Stonecoal Road</a></li>
-              </ul>
-              <ul class="header-links pull-right">
-                  
-                  <li><a href="#"href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user-o" ></i> My Account</a></li>
-
-
-                  <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                    {% if request.user.is_authenticated %}
-                        {% if request.user.is_superuser %}
-                            <a href="" class="dropdown-item">Product Management</a>
-                        {% endif %}
-                        <a href="" class="dropdown-item">My Profile</a>
-                        <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                    {% else %}
-                        <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                        <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                    {% endif %}
-                </div>
-              </ul>
-          </div>
+        <div id="top-header">
+            <div class="container">
+                <ul class="header-links pull-left">
+                    <li><a href="#"><i class="fa fa-phone"></i> +021-95-51-84</a></li>
+                    <li><a href="#"><i class="fa fa-envelope-o"></i> email@email.com</a></li>
+                    <li><a href="#"><i class="fa fa-map-marker"></i> 1734 Stonecoal Road</a></li>
+                </ul>
+                
+            </div>
+        </div>
+        
+                
           <!--account-->
   
             
@@ -97,7 +83,29 @@
                   </div>
   <!--Search end-->
 
-  
+  <!--account-->
+
+  <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+    <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+        <li class="list-inline-item dropdown">
+            <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div class="text-center">
+                    <div><i class="fas fa-user fa-lg"></i></div>
+                    <p class="my-0">My Account</p>
+                </div>
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                {% if request.user.is_authenticated %}
+                    {% if request.user.is_superuser %}
+                        <a href="" class="dropdown-item">Product Management</a>
+                    {% endif %}
+                    <a href="" class="dropdown-item">My Profile</a>
+                    <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                {% else %}
+                    <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                    <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                {% endif %}
+            </div>
 
 
                   <div class="col-md-3 clearfix">
