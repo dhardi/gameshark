@@ -1,0 +1,83 @@
+[
+    {
+       "pk": 1,
+       "model": "products.category",
+       "fields": {
+          "name": "playstation_games",
+          "friendly_name": "PlayStation Games"
+       }
+    },
+    {
+       "pk": 2,
+       "model": "products.category",
+       "fields": {
+          "name": "xbox_games",
+          "friendly_name": "Xbox Games"
+       }
+    },
+    {
+       "pk": 3,
+       "model": "products.category",
+       "fields": {
+          "name": "nintendo_games",
+          "friendly_name": "Nintendo Games"
+       }
+    },
+    {
+       "pk": 4,
+       "model": "products.category",
+       "fields": {
+          "name": "pc_games",
+          "friendly_name": "PC Games"
+       }
+    },
+    {
+       "pk": 5,
+       "model": "products.category",
+       "fields": {
+          "name": "playstation_accessories",
+          "friendly_name": "PlayStation Accessories"
+       }
+    },
+    {
+       "pk": 6,
+       "model": "products.category",
+       "fields": {
+          "name": "xbox_accessories",
+          "friendly_name": "Xbox Accessories"
+       }
+    },
+    {
+       "pk": 7,
+       "model": "products.category",
+       "fields": {
+          "name": "nintendo_accessories",
+          "friendly_name": "Nintendo Accessories"
+       }
+    },
+    {
+       "pk": 8,
+       "model": "products.category",
+       "fields": {
+          "name": "pc_accessories",
+          "friendly_name": "PC Accessories"
+       }
+    },
+    {
+       "pk": 9,
+       "model": "products.category",
+       "fields": {
+          "name": "deals",
+          "friendly_name": "Deals"
+       }
+    },
+    {
+       "pk": 10,
+       "model": "products.category",
+       "fields": {
+          "name": "consoles",
+          "friendly_name": "Consoles"
+       }
+    }
+ ]
+ 
