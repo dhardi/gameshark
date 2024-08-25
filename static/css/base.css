@@ -163,6 +163,16 @@ footer {
   text-align: center;
 }
 
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: white;
+	z-index: -1;
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
   #header {
