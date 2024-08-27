@@ -133,8 +133,8 @@
                 </li>
 
                 <!-- Consoles Dropdown -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="{% url 'products' %}?category=consoles" id="consolesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <li class="nav-item ">
+                    <a class="nav-link " href="{% url 'products' %}?category=consoles"  >
                         Consoles
                     </a>
                   
@@ -146,10 +146,10 @@
                         Games
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="gamesDropdown">
-                        <li><a class="dropdown-item" href="#">PlayStation Games</a></li>
-                        <li><a class="dropdown-item" href="#">Xbox Games</a></li>
-                        <li><a class="dropdown-item" href="#">Nintendo Games</a></li>
-                        <li><a class="dropdown-item" href="#">PC Games</a></li>
+                        <li><a class="dropdown-item" href="{% url 'products' %}?category=playstation_games">PlayStation Games</a></li>
+                        <li><a class="dropdown-item" href="{% url 'products' %}?category=xbox_games">Xbox Games</a></li>
+                        <li><a class="dropdown-item" href="{% url 'products' %}?category=nintendo_games">Nintendo Games</a></li>
+                        <li><a class="dropdown-item" href="{% url 'products' %}?category=pc_games">PC Games</a></li>
                     </ul>
                 </li>
 
@@ -159,10 +159,10 @@
                         Accessories
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="accessoriesDropdown">
-                        <li><a class="dropdown-item" href="#">PlayStation Accessories</a></li>
-                        <li><a class="dropdown-item" href="#">Xbox Accessories</a></li>
-                        <li><a class="dropdown-item" href="#">Nintendo Accessories</a></li>
-                        <li><a class="dropdown-item" href="#">PC Accessories</a></li>
+                        <li><a class="dropdown-item" href="{% url 'products' %}?category=playstation_accessories">PlayStation Accessories</a></li>
+                        <li><a class="dropdown-item" href="{% url 'products' %}?category=xbox_accessories">Xbox Accessories</a></li>
+                        <li><a class="dropdown-item" href="{% url 'products' %}?category=nintendo_accessories">Nintendo Accessories</a></li>
+                        <li><a class="dropdown-item" href="{% url 'products' %}?category=pc_accessories">PC Accessories</a></li>
                     </ul>
                 </li>
             </ul>
