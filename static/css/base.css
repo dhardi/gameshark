@@ -146,14 +146,7 @@ header {
   background: #555;
 }
 
-/* Mensagens e alertas */
-.message-container {
-  padding: 15px;
-  background: #f0ad4e;
-  color: #fff;
-  margin: 10px 0;
-  border-radius: 3px;
-}
+
 
 /* Estilo do rodapé */
 footer {
@@ -197,6 +190,23 @@ footer {
 .btn-outline-black:focus {
   background: black;
   color: white !important;
+}
+
+/* ------------------------------- bootstrap toasts */
+
+.message-container {
+  position: fixed;
+  top: 72px;
+  right: 15px;
+  z-index: 99999999999;
+}
+
+.custom-toast {
+  overflow: visible;
+}
+
+.toast-capper {
+  height: 2px;
 }
 
 /* Responsividade */
