@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 import os
+import dj_database_url
 if os.path.exists("env.py"):
   import env 
 from pathlib import Path
@@ -27,7 +28,7 @@ SECRET_KEY = 'django-insecure-a_)-r3o5+gh#ms+a(l3v%o5pt__)q@bq2(rx1te#s3rf)co%_l
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-dhardi-gameshark-bhu4l2pphf2.ws.codeinstitute-ide.net']
+ALLOWED_HOSTS = ['8000-dhardi-gameshark-bhu4l2pphf2.ws.codeinstitute-ide.net','gameshark.herokuapp.com','localhost']
 
 CSRF_TRUSTED_ORIGINS = [
     'https://8000-dhardi-gameshark-bhu4l2pphf2.ws.codeinstitute-ide.net',
@@ -138,14 +139,23 @@ WSGI_APPLICATION = 'gameshark.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+ # DATABASES = {
+ #     'default': {
+ #         'ENGINE': 'django.db.backends.sqlite3',
+ #         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+ #     }
+ # }
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
-}
-
-
+else:    
+    DATABASES = {
+     'default': {
+         'ENGINE': 'django.db.backends.sqlite3',
+         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+     }
+ }
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
 
