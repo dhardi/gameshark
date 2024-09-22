@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-a_)-r3o5+gh#ms+a(l3v%o5pt__)q@bq2(rx1te#s3rf)co%_l
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-dhardi-gameshark-bhu4l2pphf2.ws.codeinstitute-ide.net','gameshark.herokuapp.com','localhost']
+ALLOWED_HOSTS = ['8000-dhardi-gameshark-bhu4l2pphf2.ws.codeinstitute-ide.net','gameshark-4e405cfc132a.herokuapp.com','localhost']
 
 CSRF_TRUSTED_ORIGINS = [
     'https://8000-dhardi-gameshark-bhu4l2pphf2.ws.codeinstitute-ide.net',
