@@ -33,4 +33,4 @@ def remove_from_wishlist(request, product_id):
 
     messages.success(request, f'{product.name} has been removed from your wishlist.')  # Success message for removal
 
-    return redirect('wishlist:wishlist_view')
+    return redirect('wishlist_view')
