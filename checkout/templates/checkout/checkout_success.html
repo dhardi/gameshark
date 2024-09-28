@@ -190,7 +190,8 @@
                 </div>
             </div>
         </div>
-        <a href="{% url 'add_testimonial' %}" class="btn btn-primary">Write a Testimonial</a>
+        <a href="{% url 'add_testimonial' order.order_number %}" class="btn btn-primary">Write a Testimonial</a>
+
 
         <div class="row">
 			<div class="col-12 col-lg-7 text-right">
@@ -214,4 +215,17 @@
 			</div>
 		</div>
     </div>
+    <div class="container mt-5">
+        <h2>Order Successful</h2>
+        <p>Thank you for your order!</p>
+        <p>Order Number: {{ order.order_number }}</p>
+    
+        {% if not order.testimonial %}
+        <a href="{% url 'add_testimonial' order.order_number %}" class="btn btn-primary">Write a Testimonial</a>
+
+        {% else %}
+            <p>You have already submitted a testimonial for this order.</p>
+        {% endif %}
+    </div>
 {% endblock %}
+

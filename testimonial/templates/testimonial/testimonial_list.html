@@ -4,31 +4,38 @@
 {% block content %}
 <div class="container mt-5">
     <h2>Testimonials</h2>
-    <a href="{% url 'add_testimonial' %}" class="btn btn-success mb-3">Write a Testimonial</a>
 
-    {% for testimonial in testimonials %}
-    <div class="card mb-3">
-        <div class="card-body">
-            <h5 class="card-title">{{ testimonial.user.username }}</h5>
-            <p class="card-text">{{ testimonial.text }}</p>
-            <div>
-                <!-- Display filled stars based on rating -->
-                {% for i in "12345" %}
-                    {% if forloop.counter <= testimonial.rating %}
-                        <i class="fas fa-star text-warning"></i>
-                    {% else %}
-                        <i class="far fa-star text-warning"></i>
-                    {% endif %}
-                {% endfor %}
+    <!-- Aqui, certifique-se de passar o order_number corretamente -->
+    <!-- <a href="{% url 'add_testimonial' order.order_number %}" class="btn btn-success mb-3">Write a Testimonial</a>-->
+
+    <!-- Verifique se a lista de testimonials existe e não está vazia -->
+    {% if testimonials %}
+        {% for testimonial in testimonials %}
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">{{ testimonial.user.username }}</h5>
+                <p class="card-text">{{ testimonial.text }}</p>
+                <div>
+                    <!-- Exibir estrelas cheias e vazias com base na avaliação -->
+                    {% for i in "12345" %}
+                        {% if forloop.counter <= testimonial.rating %}
+                            <i class="fas fa-star text-warning"></i>
+                        {% else %}
+                            <i class="far fa-star text-warning"></i>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                <p class="card-text"><small class="text-muted">Posted on {{ testimonial.created_at }}</small></p>
+
+                <!-- Mostrar o botão de deletar apenas se for o proprietário do testemunho -->
+                {% if testimonial.user == request.user %}
+                <a href="{% url 'delete_testimonial' testimonial.id %}" class="btn btn-danger">Delete</a>
+                {% endif %}
             </div>
-            <p class="card-text"><small class="text-muted">Posted on {{ testimonial.created_at }}</small></p>
-
-            <!-- Only show delete button for the owner of the testimonial -->
-            {% if testimonial.user == request.user %}
-            <a href="{% url 'delete_testimonial' testimonial.id %}" class="btn btn-danger">Delete</a>
-            {% endif %}
         </div>
-    </div>
-    {% endfor %}
+        {% endfor %}
+    {% else %}
+        <p>No testimonials available yet.</p>
+    {% endif %}
 </div>
 {% endblock %}

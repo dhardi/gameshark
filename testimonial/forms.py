@@ -1,3 +1,4 @@
+# forms.py do app testimonial
 
 from django import forms
 from .models import Testimonial
@@ -7,6 +8,5 @@ class TestimonialForm(forms.ModelForm):
         model = Testimonial
         fields = ['text', 'rating']
         widgets = {
-            'text': forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Write your testimonial'}),
-            'rating': forms.Select(attrs={'class': 'form-control'}),
+            'rating': forms.RadioSelect(choices=[(i, i) for i in range(1, 6)]),
         }
