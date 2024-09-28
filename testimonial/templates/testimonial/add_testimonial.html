@@ -3,11 +3,65 @@
 
 {% block content %}
 <div class="container mt-5">
-    <h2>Add a Testimonial</h2>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+    <h2 class="text-center mb-4">Share Your Experience</h2>
+    
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card shadow-sm">
+                <div class="card-body p-4">
+                    <h5 class="card-title text-center mb-4">Add a Testimonial</h5>
+                    
+                    <form method="post">
+                        {% csrf_token %}
+                        
+                        <!-- Text Field with better alignment -->
+                        <div class="form-group mb-3">
+                            {{ form.text.label_tag }} <!-- "Text" Label -->
+                            {{ form.text }} <!-- O campo já terá a classe form-control aplicada -->
+                        </div>
+                        
+                        <!-- Rating Field improved to look like star rating -->
+                        <div class="form-group mb-4 text-center">
+                            <label for="id_rating" class="form-label">Rating:</label>
+                            <div class="star-rating d-flex justify-content-center">
+                                {% for i in "12345" %}
+                                    <label for="id_rating_{{ i }}" class="star-label">
+                                        <input type="radio" id="id_rating_{{ i }}" name="rating" value="{{ i }}" class="d-none">
+                                        <i class="far fa-star fa-2x" data-value="{{ i }}"></i>
+                                    </label>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        
+                        <!-- Submit Button -->
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary btn-block">Submit Testimonial</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+<!-- Optional: JavaScript for clickable star rating interaction -->
+<script>
+    document.querySelectorAll('.star-rating .star-label i').forEach(star => {
+        star.addEventListener('click', function() {
+            const ratingValue = this.getAttribute('data-value');
+            document.getElementById('id_rating_' + ratingValue).checked = true;
+
+            document.querySelectorAll('.star-rating .star-label i').forEach(otherStar => {
+                if (otherStar.getAttribute('data-value') <= ratingValue) {
+                    otherStar.classList.remove('far');
+                    otherStar.classList.add('fas');
+                } else {
+                    otherStar.classList.remove('fas');
+                    otherStar.classList.add('far');
+                }
+            });
+        });
+    });
+</script>
+
 {% endblock %}

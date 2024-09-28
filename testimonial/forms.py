@@ -1,5 +1,3 @@
-# forms.py do app testimonial
-
 from django import forms
 from .models import Testimonial
 
@@ -7,6 +5,8 @@ class TestimonialForm(forms.ModelForm):
     class Meta:
         model = Testimonial
         fields = ['text', 'rating']
-        widgets = {
-            'rating': forms.RadioSelect(choices=[(i, i) for i in range(1, 6)]),
-        }
+
+    def __init__(self, *args, **kwargs):
+        super(TestimonialForm, self).__init__(*args, **kwargs)
+        self.fields['text'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Write your testimonial here...'})
+        self.fields['rating'].widget.attrs.update({'class': 'form-control'})  # Se precisar aplicar um estilo ao campo de classificação
