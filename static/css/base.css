@@ -94,6 +94,10 @@ header {
   padding: 0;
 }
 
+#navigation {
+  display: block; /* Assegura que a navegação esteja visível */
+}
+
 /* Navegação - Itens */
 #navigation .nav-item {
   position: relative; /* Necessário para dropdown */
@@ -425,6 +429,11 @@ footer {
     .header-container {
         padding-top: 164px;
     }
+
+    .navbar-toggler {
+      display: none; /* Esconde o botão no modo full screen */
+  }
+    
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
@@ -449,9 +458,16 @@ footer {
   }
   
   .navbar-toggler {
-    padding: .6rem .6rem;
-    font-size: 1rem;
-  }
+    background-color: transparent; /* Torna o fundo transparente */
+    border: none; /* Remove a borda */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgb(255, 255, 255)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    /* Mude a cor do stroke se necessário */
+}
+
+
   
   #delivery-banner h4 {
     font-size: .9rem;
@@ -472,6 +488,64 @@ footer {
     padding: .25rem .5rem !important;
   }
 }
+
+/* ... seu código CSS existente ... */
+
+/* Novo CSS para Navegação */
+#navigation {
+  background: #343a40; /* Cor de fundo escura */
+}
+
+.header-logo h2 {
+  color: #ffc107; /* Cor do texto do logo (amarelo) */
+  transition: color 0.3s ease; /* Transição suave na cor do logo */
+}
+
+.header-logo h2:hover {
+  color: #fff; /* Muda a cor do texto do logo ao passar o mouse */
+}
+
+#navigation .nav-link {
+  color: #fff; /* Cor dos links */
+  padding: 10px 15px; /* Adiciona espaçamento ao redor dos links */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transições suaves para os efeitos de hover */
+}
+
+#navigation .nav-link:hover {
+  background-color: #007bff; /* Cor de fundo ao passar o mouse (azul) */
+  color: #fff; /* Muda a cor do texto ao passar o mouse */
+  border-radius: 5px; /* Arredonda os cantos do link */
+}
+
+#navigation .dropdown-menu {
+  background: #495057; /* Cor de fundo do dropdown */
+  border-radius: 5px; /* Arredonda os cantos do dropdown */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra para o dropdown */
+}
+
+#navigation .dropdown-item {
+  color: #fff; /* Cor do texto dos itens do dropdown */
+}
+
+#navigation .dropdown-item:hover {
+  background: #007bff; /* Cor de fundo ao passar o mouse no item do dropdown */
+  color: #fff; /* Muda a cor do texto ao passar o mouse */
+}
+
+.navbar-toggler {
+  background-color: #007bff; /* Cor de fundo do botão toggle */
+  border: none; /* Remove a borda */
+  border-radius: 5px; /* Arredonda os cantos do botão toggle */
+}
+
+.navbar-toggler:hover {
+  background-color: #0056b3; /* Muda a cor ao passar o mouse */
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgb(255, 255, 255)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); /* Muda a cor do ícone */
+}
+
 
 
 
