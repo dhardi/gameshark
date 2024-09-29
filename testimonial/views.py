@@ -57,3 +57,19 @@ def delete_testimonial(request, id):
     else:
         messages.error(request, "You don't have permission to delete this testimonial.")
     return redirect('testimonial_list')
+
+
+@login_required
+def edit_testimonial(request, testimonial_id):
+    testimonial = get_object_or_404(Testimonial, id=testimonial_id, user=request.user)
+
+    if request.method == 'POST':
+        form = TestimonialForm(request.POST, instance=testimonial)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Your testimonial has been updated successfully.')
+            return redirect('testimonial_list')  # Ou outra página para redirecionar após a edição
+    else:
+        form = TestimonialForm(instance=testimonial)
+
+    return render(request, 'testimonial/edit_testimonial.html', {'form': form})

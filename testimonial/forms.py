@@ -9,4 +9,4 @@ class TestimonialForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super(TestimonialForm, self).__init__(*args, **kwargs)
         self.fields['text'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Write your testimonial here...'})
-        self.fields['rating'].widget.attrs.update({'class': 'form-control'})  # Se precisar aplicar um estilo ao campo de classificação
+        self.fields['rating'].widget.attrs.update({'class': 'form-control'})  

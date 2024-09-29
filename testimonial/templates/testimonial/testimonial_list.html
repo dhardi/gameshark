@@ -29,6 +29,7 @@
 
                 <!-- Mostrar o botão de deletar apenas se for o proprietário do testemunho -->
                 {% if testimonial.user == request.user %}
+                <a href="{% url 'edit_testimonial' testimonial.id %}" class="btn btn-warning">Edit</a>
                 <a href="{% url 'delete_testimonial' testimonial.id %}" class="btn btn-danger">Delete</a>
                 {% endif %}
             </div>
