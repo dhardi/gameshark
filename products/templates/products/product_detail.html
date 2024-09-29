@@ -110,6 +110,43 @@
             </div>
         </div>
     </div>
+
+    <!-- Exibir Reviews -->
+<h2>Reviews</h2>
+
+{% if product.reviews.all %}
+    {% for review in product.reviews.all %}
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">{{ review.title }}</h5>
+                <p class="card-text">{{ review.body }}</p>
+                <small class="text-muted">Rating: {{ review.rating }} / 5</small><br>
+                <small class="text-muted">Reviewed by {{ review.user.username }} on {{ review.created_at }}</small>
+                
+                <!-- Mostrar botões de editar/excluir apenas para o autor da review -->
+                {% if review.user == request.user %}
+                    <a href="{% url 'edit_review' review.id %}" class="btn btn-warning btn-sm">Edit</a>
+                    <a href="{% url 'delete_review' review.id %}" class="btn btn-danger btn-sm">Delete</a>
+                {% endif %}
+            </div>
+        </div>
+    {% endfor %}
+{% else %}
+    <p>No reviews yet.</p>
+{% endif %}
+
+{% if user.is_authenticated %}
+    {% if user_has_reviewed %}
+        <p>You have already submitted a review for this product.</p>
+    {% else %}
+        <a href="{% url 'add_review' product.id %}" class="btn btn-primary">Add Review</a>
+    {% endif %}
+{% else %}
+    <p><a href="{% url 'account_login' %}">Log in</a> to add a review.</p>
+{% endif %}
+
+
+
 {% endblock %}
 
 {% block postloadjs %}
