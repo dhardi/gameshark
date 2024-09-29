@@ -260,6 +260,25 @@ footer {
   overflow-y: auto;
 }
 
+.header-container {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: auto;
+}
+
+.card {
+  margin: 0 auto; /* Centraliza o cartão no carousel */
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+
 
 /* Responsividade */
 @media (max-width: 768px) {
