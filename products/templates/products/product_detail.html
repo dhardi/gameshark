@@ -46,7 +46,7 @@
                                                 <small class="ml-3">
                                                     <a href="{% url 'edit_product' product.id %}">Edit</a> | 
                                                     <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a> |
-                                                    <a href="{% url 'add_to_wishlist' product.id %}">Add to Wishlist</a>
+                                                    
 
 
                                                 </small>
@@ -55,6 +55,14 @@
                     <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                         {% csrf_token %}
                         <div class="form-row">
+
+                            {% if user.is_authenticated %}
+    <a href="{% url 'add_to_wishlist' product.id %}" class="btn btn-primary">
+        Add to Wishlist
+    </a>
+{% else %}
+    <p>Please <a href="{% url 'account_login' %}">login</a> to add items to your wishlist.</p>
+{% endif %}
                             
                             
 
