@@ -190,8 +190,7 @@
                 </div>
             </div>
         </div>
-        <a href="{% url 'add_testimonial' order.order_number %}" class="btn btn-primary">Write a Testimonial</a>
-
+        
 
         <div class="row">
 			<div class="col-12 col-lg-7 text-right">
@@ -209,23 +208,30 @@
 					</span>
 					<span class="text-uppercase">Now check out the latest deals!</span>
 				</a>
-                
-
                 {% endif %}
 			</div>
 		</div>
     </div>
-    <div class="container mt-5">
-        <h2>Order Successful</h2>
-        <p>Thank you for your order!</p>
-        <p>Order Number: {{ order.order_number }}</p>
-    
+
+    <!-- Testimonial Section -->
+    <div class="container mt-5 text-center testimonial-section">
+        <hr class="testimonial-divider">
+        <h2 class="font-weight-bold text-success">Your Order is Successful!</h2>
+        <p class="lead text-muted">Thank you for your purchase. We would love to hear your thoughts!</p>
+
+        <p class="text-primary font-weight-bold">Order Number: {{ order.order_number }}</p>
+
         {% if not order.testimonial %}
-        <a href="{% url 'add_testimonial' order.order_number %}" class="btn btn-primary">Write a Testimonial</a>
+        <a href="{% url 'add_testimonial' order.order_number %}" class="btn btn-lg btn-outline-success testimonial-btn mt-3">
+            <span class="icon mr-2">
+                <i class="fas fa-pencil-alt"></i>
+            </span>
+            Write a Testimonial
+        </a>
+        <p class="small text-muted mt-2">Your feedback helps us to improve our service.</p>
 
         {% else %}
-            <p>You have already submitted a testimonial for this order.</p>
+            <p class="font-weight-bold text-success">You have already submitted a testimonial for this order.</p>
         {% endif %}
     </div>
 {% endblock %}
-

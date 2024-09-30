@@ -105,7 +105,7 @@ header {
 }
 
 #navigation .nav-link {
-  color: #fff;
+  
   text-decoration: none;
   text-align: center;
 }
@@ -149,6 +149,52 @@ header {
 #navigation .dropdown-item:hover {
   background: #555;
 }
+
+/* Estilo da seção de testimonial */
+.testimonial-section {
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+}
+
+.testimonial-divider {
+  width: 50%;
+  margin: 20px auto;
+  border-top: 2px solid #28a745;
+}
+
+.testimonial-section h2 {
+  font-size: 2rem;
+  color: #28a745;
+}
+
+.testimonial-section p.lead {
+  font-size: 1.2rem;
+}
+
+.testimonial-btn {
+  padding: 10px 30px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.testimonial-btn:hover {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.testimonial-btn .icon {
+  font-size: 1.2rem;
+  vertical-align: middle;
+}
+
+/* Pequena animação ao passar o mouse no botão */
+.testimonial-btn:hover .icon {
+  transform: scale(1.1);
+}
+
 
 
 
@@ -506,7 +552,7 @@ footer {
 }
 
 #navigation .nav-link {
-  color: #fff; /* Cor dos links */
+  
   padding: 10px 15px; /* Adiciona espaçamento ao redor dos links */
   transition: background-color 0.3s ease, color 0.3s ease; /* Transições suaves para os efeitos de hover */
 }
