@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load custom_tags %}
 {% load static %}
 
 {% block page_header %}
@@ -128,11 +129,12 @@
                             <h5 class="card-title text-success">{{ review.title }}</h5>
                             <p class="card-text">{{ review.body }}</p>
                             <div class="review-rating">
-                                {% for star in "★"|slice:":review.rating" %}
-                                    <i class="fas fa-star text-warning"></i>
-                                {% endfor %}
-                                {% for star in "☆☆☆☆☆"|slice:":5-review.rating" %}
-                                    <i class="fas fa-star text-muted"></i>
+                                {% for i in "12345" %}
+                                    {% if forloop.counter <= review.rating %}
+                                        <i class="fas fa-star text-warning"></i>
+                                    {% else %}
+                                        <i class="fas fa-star text-muted"></i>
+                                    {% endif %}
                                 {% endfor %}
                             </div>
                             <small class="text-muted d-block mt-2">
@@ -174,6 +176,9 @@
         {% endif %}
     </div>
 </div>
+
+
+
 
 
 

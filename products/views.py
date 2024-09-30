@@ -5,6 +5,7 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 from reviews.models import Review
 
+
 from .models import Product, Category
 from .forms import ProductForm
 

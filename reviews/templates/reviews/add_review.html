@@ -64,6 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         star.addEventListener("click", function () {
             ratingInput.value = this.getAttribute("data-value");
+            highlightStars(ratingInput.value);  // Atualiza a exibição das estrelas após o clique
         });
 
         star.addEventListener("mouseout", function () {
@@ -76,6 +77,8 @@ document.addEventListener("DOMContentLoaded", function () {
         stars.forEach(star => {
             if (parseInt(star.getAttribute("data-value")) <= parseInt(rating)) {
                 star.classList.add("text-warning");
+            } else {
+                star.classList.remove("text-warning");  // Remover a classe para estrelas não selecionadas
             }
         });
     }
