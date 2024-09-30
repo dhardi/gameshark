@@ -1,38 +1,57 @@
-{% extends "account/base_entrance.html" %}
+{% extends "account/base.html" %}
 {% load allauth i18n %}
+
 {% block head_title %}
     {% trans "Signup" %}
 {% endblock head_title %}
+
 {% block content %}
-    {% element h1 %}
-        {% trans "Sign Up" %}
-    {% endelement %}
-    {% setvar link %}
-        <a href="{{ login_url }}">
-        {% endsetvar %}
-        {% setvar end_link %}
-        </a>
-    {% endsetvar %}
-    {% element p %}
-        {% blocktranslate %}Already have an account? Then please {{ link }}sign in{{ end_link }}.{% endblocktranslate %}
-    {% endelement %}
-    {% if not SOCIALACCOUNT_ONLY %}
-        {% url 'account_signup' as action_url %}
-        {% element form form=form method="post" action=action_url tags="entrance,signup" %}
-            {% slot body %}
-                {% csrf_token %}
-                {% element fields form=form unlabeled=True %}
-                {% endelement %}
-                {{ redirect_field }}
-            {% endslot %}
-            {% slot actions %}
-                {% element button tags="prominent,signup" type="submit" %}
-                    {% trans "Sign Up" %}
-                {% endelement %}
-            {% endslot %}
-        {% endelement %}
-    {% endif %}
-    {% if SOCIALACCOUNT_ENABLED %}
-        {% include "socialaccount/snippets/login.html" with page_layout="entrance" %}
-    {% endif %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6">
+            <div class="card shadow-sm border-light">
+                <div class="card-body">
+                    <h1 class="text-center text-primary mb-4">
+                        {% trans "Sign Up" %}
+                    </h1>
+                    <p class="text-center text-muted mb-4">
+                        {% blocktranslate %}Already have an account? Then please <a href="{{ login_url }}">{{ "sign in" }}</a>.{% endblocktranslate %}
+                    </p>
+
+                    {% if not SOCIALACCOUNT_ONLY %}
+                        <form method="post" action="{% url 'account_signup' %}">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                {% for field in form %}
+                                    <div class="mb-3">
+                                        <label for="{{ field.id_for_label }}" class="form-label">{{ field.label }}</label>
+                                        {{ field }}  <!-- Renderiza o campo do formulário sem filtros -->
+                                        <div class="text-danger mt-2">
+                                            {% if field.errors %}
+                                                {{ field.errors|join:", " }}
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                            {{ redirect_field }}
+                            <div class="d-flex justify-content-center">
+                                <button type="submit" class="btn btn-primary btn-lg rounded-pill px-4">
+                                    {% trans "Sign Up" %}
+                                </button>
+                            </div>
+                        </form>
+                    {% endif %}
+
+                    {% if SOCIALACCOUNT_ENABLED %}
+                        <div class="mt-4">
+                            <h5 class="text-center text-muted">Or sign up using</h5>
+                            {% include "socialaccount/snippets/login.html" with page_layout="entrance" %}
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock content %}
