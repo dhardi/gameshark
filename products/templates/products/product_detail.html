@@ -112,38 +112,69 @@
     </div>
 
     <!-- Exibir Reviews -->
-<h2>Reviews</h2>
+<!-- Seção de Reviews -->
+<div class="reviews-section mt-5">
+    <hr class="reviews-divider">
+    <h2 class="text-center">What Our Customers Are Saying</h2>
+    <p class="lead text-center text-muted">We value your feedback! Share your thoughts on {{ product.name }}.</p>
 
-{% if product.reviews.all %}
-    {% for review in product.reviews.all %}
-        <div class="card mb-3">
-            <div class="card-body">
-                <h5 class="card-title">{{ review.title }}</h5>
-                <p class="card-text">{{ review.body }}</p>
-                <small class="text-muted">Rating: {{ review.rating }} / 5</small><br>
-                <small class="text-muted">Reviewed by {{ review.user.username }} on {{ review.created_at }}</small>
-                
-                <!-- Mostrar botões de editar/excluir apenas para o autor da review -->
-                {% if review.user == request.user %}
-                    <a href="{% url 'edit_review' review.id %}" class="btn btn-warning btn-sm">Edit</a>
-                    <a href="{% url 'delete_review' review.id %}" class="btn btn-danger btn-sm">Delete</a>
-                {% endif %}
-            </div>
+    {% if product.reviews.all %}
+        <!-- Exibir cada review -->
+        <div class="row">
+            {% for review in product.reviews.all %}
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card review-card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title text-success">{{ review.title }}</h5>
+                            <p class="card-text">{{ review.body }}</p>
+                            <div class="review-rating">
+                                {% for star in "★"|slice:":review.rating" %}
+                                    <i class="fas fa-star text-warning"></i>
+                                {% endfor %}
+                                {% for star in "☆☆☆☆☆"|slice:":5-review.rating" %}
+                                    <i class="fas fa-star text-muted"></i>
+                                {% endfor %}
+                            </div>
+                            <small class="text-muted d-block mt-2">
+                                Reviewed by <strong>{{ review.user.username }}</strong> on {{ review.created_at }}
+                            </small>
+
+                            <!-- Botões para o autor da review editar ou excluir -->
+                            {% if review.user == request.user %}
+                                <div class="mt-3">
+                                    <a href="{% url 'edit_review' review.id %}" class="btn btn-warning btn-sm mr-2">
+                                        <i class="fas fa-edit"></i> Edit
+                                    </a>
+                                    <a href="{% url 'delete_review' review.id %}" class="btn btn-danger btn-sm">
+                                        <i class="fas fa-trash"></i> Delete
+                                    </a>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
         </div>
-    {% endfor %}
-{% else %}
-    <p>No reviews yet.</p>
-{% endif %}
-
-{% if user.is_authenticated %}
-    {% if user_has_reviewed %}
-        <p>You have already submitted a review for this product.</p>
     {% else %}
-        <a href="{% url 'add_review' product.id %}" class="btn btn-primary">Add Review</a>
+        <p class="text-center text-muted">No reviews yet. Be the first to review this product!</p>
     {% endif %}
-{% else %}
-    <p><a href="{% url 'account_login' %}">Log in</a> to add a review.</p>
-{% endif %}
+
+    <!-- Formulário para adicionar review (se autenticado) -->
+    <div class="text-center mt-4">
+        {% if user.is_authenticated %}
+            {% if user_has_reviewed %}
+                <p class="text-success">You have already submitted a review for this product.</p>
+            {% else %}
+                <a href="{% url 'add_review' product.id %}" class="btn btn-outline-primary review-btn">
+                    <i class="fas fa-pen mr-2"></i>Add Your Review
+                </a>
+            {% endif %}
+        {% else %}
+            <p><a href="{% url 'account_login' %}" class="text-primary">Log in</a> to leave a review.</p>
+        {% endif %}
+    </div>
+</div>
+
 
 
 

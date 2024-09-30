@@ -1,12 +1,93 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
-<div class="container">
-    <h2>Add a Review for {{ product.name }}</h2>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+<div class="container add-review-container py-5">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6">
+            <div class="card shadow-sm p-4">
+                <h2 class="text-center text-success mb-4">Share Your Experience with {{ product.name }}</h2>
+                <p class="text-center text-muted mb-5">Your feedback helps other customers make the best decisions!</p>
+                
+                <!-- Formulário de review -->
+                <form method="post" class="review-form">
+                    {% csrf_token %}
+
+                    <div class="form-group">
+                        <label for="id_title">Review Title</label>
+                        {{ form.title }}
+                        <small class="form-text text-muted">Give your review a catchy title.</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="id_body">Your Review</label>
+                        {{ form.body }}
+                        <small class="form-text text-muted">Tell us what you liked or disliked about the product.</small>
+                    </div>
+
+                    <!-- Avaliação com Estrelas -->
+                    <div class="form-group">
+                        <label for="id_rating">Your Rating</label>
+                        <div class="rating" id="star-rating">
+                            {% for i in "12345" %}
+                                <i class="fas fa-star" data-value="{{ i }}"></i>
+                            {% endfor %}
+                        </div>
+                        <input type="hidden" name="rating" id="id_rating" value="1">
+                        <small class="form-text text-muted">Rate the product from 1 to 5 stars.</small>
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <button type="submit" class="btn btn-success btn-lg px-5">
+                            <i class="fas fa-paper-plane mr-2"></i>Submit Review
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
+{% endblock %}
+
+{% block postloadjs %}
+<script>
+// Script para tornar as estrelas interativas
+document.addEventListener("DOMContentLoaded", function () {
+    const stars = document.querySelectorAll("#star-rating .fa-star");
+    const ratingInput = document.getElementById("id_rating");
+
+    stars.forEach(star => {
+        star.addEventListener("mouseover", function () {
+            resetStars();
+            highlightStars(this.getAttribute("data-value"));
+        });
+
+        star.addEventListener("click", function () {
+            ratingInput.value = this.getAttribute("data-value");
+        });
+
+        star.addEventListener("mouseout", function () {
+            resetStars();
+            highlightStars(ratingInput.value);
+        });
+    });
+
+    function highlightStars(rating) {
+        stars.forEach(star => {
+            if (parseInt(star.getAttribute("data-value")) <= parseInt(rating)) {
+                star.classList.add("text-warning");
+            }
+        });
+    }
+
+    function resetStars() {
+        stars.forEach(star => {
+            star.classList.remove("text-warning");
+        });
+    }
+
+    // Iniciar com o valor selecionado
+    highlightStars(ratingInput.value);
+});
+</script>
 {% endblock %}

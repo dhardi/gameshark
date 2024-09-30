@@ -195,6 +195,128 @@ header {
   transform: scale(1.1);
 }
 
+/* Seção de reviews */
+.reviews-section {
+  background-color: #f9f9f9;
+  padding: 40px;
+  border-radius: 10px;
+  margin-top: 50px;
+}
+
+.reviews-divider {
+  width: 50%;
+  margin: 0 auto 30px auto;
+  border-top: 3px solid #28a745;
+}
+
+.reviews-section h2 {
+  font-size: 2rem;
+  color: #28a745;
+  font-weight: 700;
+}
+
+.reviews-section p.lead {
+  font-size: 1.2rem;
+  color: #6c757d;
+  margin-bottom: 40px;
+}
+
+.review-card {
+  background-color: #fff;
+  border: none;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.review-card:hover {
+  transform: scale(1.02);
+}
+
+.review-card h5 {
+  color: #28a745;
+  font-size: 1.25rem;
+}
+
+.review-rating .fas.fa-star {
+  font-size: 1rem;
+}
+
+.review-btn {
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.review-btn:hover {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.review-btn .fas {
+  font-size: 1rem;
+}
+
+/* Container de adição de review */
+.add-review-container {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 40px;
+  margin-top: 50px;
+}
+
+.add-review-container .card {
+  border: none;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.add-review-container h2 {
+  color: #28a745;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+.add-review-container p {
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+.add-review-container .form-group label {
+  font-weight: 600;
+  color: #333;
+}
+
+.add-review-container .form-control {
+  border-radius: 6px;
+  padding: 12px;
+  border: 1px solid #ced4da;
+}
+
+.add-review-container .form-control:focus {
+  box-shadow: 0 0 5px rgba(40, 167, 69, 0.3);
+  border-color: #28a745;
+}
+
+.add-review-container .btn-success {
+  background-color: #28a745;
+  border: none;
+  border-radius: 50px;
+  transition: background-color 0.3s ease;
+}
+
+.add-review-container .btn-success:hover {
+  background-color: #218838;
+}
+
+.add-review-container .btn-lg {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+
+
 
 
 
