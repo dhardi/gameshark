@@ -51,11 +51,14 @@ header {
   justify-content: flex-end;
 }
 
-.input-select, .input, .search-btn {
+.input-select,
+.input,
+.search-btn {
   margin: 0 5px;
 }
 
-.input-select, .input {
+.input-select,
+.input {
   padding: 5px;
   border: 1px solid #ddd;
   border-radius: 3px;
@@ -79,6 +82,7 @@ header {
   background: #333;
   color: #fff;
   padding: 10px 0;
+  display: block; /* Garante visibilidade */
 }
 
 #navigation .container {
@@ -94,18 +98,13 @@ header {
   padding: 0;
 }
 
-#navigation {
-  display: block; /* Assegura que a navegação esteja visível */
-}
-
 /* Navegação - Itens */
 #navigation .nav-item {
-  position: relative; /* Necessário para dropdown */
+  position: relative;
   margin-left: 20px;
 }
 
 #navigation .nav-link {
-  
   text-decoration: none;
   text-align: center;
 }
@@ -125,19 +124,19 @@ header {
 
 /* Dropdown Menu */
 #navigation .dropdown-menu {
-  display: none; /* Inicialmente oculto */
+  display: none;
   position: absolute;
   background: #333;
   border: none;
   border-radius: 3px;
   margin-top: 10px;
-  top: 100%; /* Posiciona o menu logo abaixo do item */
+  top: 100%;
   left: 0;
-  z-index: 1000; /* Garante que o menu fique acima dos outros elementos */
+  z-index: 1000;
 }
 
 #navigation .dropdown-menu.show {
-  display: block; /* Exibe o menu quando a classe show é adicionada */
+  display: block;
 }
 
 #navigation .dropdown-item {
@@ -150,7 +149,7 @@ header {
   background: #555;
 }
 
-/* Estilo da seção de testimonial */
+/* Testemunhos */
 .testimonial-section {
   background-color: #f9f9f9;
   padding: 30px;
@@ -190,12 +189,11 @@ header {
   vertical-align: middle;
 }
 
-/* Pequena animação ao passar o mouse no botão */
 .testimonial-btn:hover .icon {
   transform: scale(1.1);
 }
 
-/* Seção de reviews */
+/* Seção de Reviews */
 .reviews-section {
   background-color: #f9f9f9;
   padding: 40px;
@@ -205,7 +203,7 @@ header {
 
 .reviews-divider {
   width: 50%;
-  margin: 0 auto 30px auto;
+  margin: 0 auto 30px;
   border-top: 3px solid #28a745;
 }
 
@@ -268,7 +266,7 @@ header {
 .add-review-container .card {
   border: none;
   border-radius: 12px;
-  background-color: #ffffff;
+  background-color: #fff;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
@@ -315,7 +313,7 @@ header {
   font-weight: 600;
 }
 
-/* Título */
+/* Estilos para Wishlist */
 .wishlist-title {
   color: #6a1b9a;
   font-weight: bold;
@@ -325,22 +323,21 @@ header {
 /* Card container geral */
 .wishlist-card {
   border-radius: 20px;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
 }
 
-/* Efeito ao passar o mouse no card */
 .wishlist-card:hover {
   transform: scale(1.05);
-  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
 /* Container da imagem no card */
 .card-image-container {
   position: relative;
-  height: 250px; /* Tamanho ajustável */
-  background-color: #f0f0f0; /* Cor de fundo quando não há imagem */
+  height: 250px;
+  background-color: #f0f0f0;
   border-bottom: 5px solid #6a1b9a;
   overflow: hidden;
   display: flex;
@@ -348,7 +345,6 @@ header {
   align-items: center;
 }
 
-/* Estilização da imagem no card */
 .card-image-container img {
   width: 100%;
   height: 100%;
@@ -357,7 +353,6 @@ header {
   transition: transform 0.4s ease;
 }
 
-/* Zoom na imagem ao passar o mouse */
 .wishlist-card:hover .card-image-container img {
   transform: scale(1.1);
 }
@@ -400,449 +395,102 @@ header {
   padding: 10px;
   margin-right: 10px;
   font-size: 1rem;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-weight: 600;
+  color: #6a1b9a;
+  border: 2px solid #6a1b9a;
+  border-radius: 25px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.wishlist-btn:last-child {
-  margin-right: 0;
-}
-
-/* Botão de comprar */
-.wishlist-btn.btn-primary {
-  background: linear-gradient(45deg, #6a1b9a, #8e24aa);
-  border: none;
-}
-
-/* Botão de remover */
-.wishlist-btn.btn-danger {
-  background-color: #e53935;
-}
-
-/* Efeito ao passar o mouse nos botões */
 .wishlist-btn:hover {
-  opacity: 0.9;
-}
-
-/* Estilo do botão de compra ao passar o mouse */
-.wishlist-btn.btn-primary:hover {
-  background: linear-gradient(45deg, #8e24aa, #6a1b9a);
-}
-
-/* Estilo do botão de remover ao passar o mouse */
-.wishlist-btn.btn-danger:hover {
-  background-color: #d32f2f;
-}
-
-/* Mensagem quando a lista está vazia */
-.empty-message {
-  font-size: 1.5rem;
-  margin-top: 50px;
-}
-
-
-
-
-
-
-
-/* Estilo do rodapé */
-footer {
-  background: #000;
+  background-color: #6a1b9a;
   color: #fff;
-  padding: 20px;
-  text-align: center;
 }
 
-.overlay {
-	height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
-	position: fixed;
-	background: white;
-	z-index: -1;
+.wishlist-icon {
+  font-size: 1.5rem;
+  margin-right: 5px;
 }
 
-.btt-button {
-  height: 42px;
-  width: 42px;
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
+.add-cart-btn {
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
 }
 
-.btt-link,
-.update-link,
-.remove-item {
-    cursor: pointer;
-}
-.btn-outline-black {
-  background: white;
-  color: black !important; /* use important to override link colors for <a> elements */
-  border: 1px solid black;
+.add-cart-btn:hover {
+  background-color: #218838;
 }
 
-.btn-outline-black:hover,
-.btn-outline-black:active,
-.btn-outline-black:focus {
-  background: black;
-  color: white !important;
+/* Ajuste do botão de adicionar ao carrinho */
+.btn-success {
+  background-color: #28a745;
 }
 
-/* ------------------------------- bootstrap toasts */
-
-.message-container {
-  position: fixed;
-  top: 72px;
-  right: 15px;
-  z-index: 99999999999;
+.btn-success:hover {
+  background-color: #218838;
 }
-
-.custom-toast {
-  overflow: visible;
-}
-
-.toast-capper {
-  height: 2px;
-}
-
-/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
-.arrow-up {
-  width: 0; 
-  height: 0; 
-  border-left: 4px solid transparent;
-  border-right: 4px solid transparent; 
-  border-bottom: 10px solid black;
-  position: absolute;
-  top: -10px;
-  right: 36px;
-}
-
-/* Convenience classes - colors copied from Bootstrap */
-.arrow-primary {
-  border-bottom-color: #007bff !important;
-}
-
-.arrow-secondary {
-  border-bottom-color: #6c757d !important;
-}
-
-.arrow-success {
-  border-bottom-color: #28a745 !important;
-}
-
-.arrow-danger {
-  border-bottom-color: #dc3545 !important;
-}
-
-.arrow-warning {
-  border-bottom-color: #ffc107 !important;
-}
-
-.arrow-info {
-  border-bottom-color: #17a2b8 !important;
-}
-
-.arrow-light {
-  border-bottom-color: #f8f9fa !important;
-}
-
-.arrow-dark {
-  border-bottom-color: #343a40 !important;
-}
-
-.bag-notification-wrapper {
-  height: 100px;
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-
-.header-container {
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
-.carousel-inner img {
-  width: 100%;
-  height: auto;
-}
-
-.card {
-  margin: 0 auto; /* Centraliza o cartão no carousel */
-}
-
-.card-title {
-  font-weight: bold;
-}
-
-
 
 /* Responsividade */
+/* Responsividade para dispositivos móveis */
 @media (max-width: 768px) {
+  /* Header */
   #header {
     flex-direction: column;
     align-items: flex-start;
+    padding: 15px 10px; /* Adiciona algum espaço interno */
   }
 
+  /* Search Bar */
   .header-search {
     margin-top: 10px;
     width: 100%;
   }
-  input[name='q']::placeholder {
-    color: #aab7c4;
-}
 
-  .header-search form {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .input-select, .input, .search-btn {
-    width: 100%;
-    margin: 5px 0;
-  }
-
+  /* Navegação */
   #navigation .container {
-    width: 100%;
     justify-content: center;
+    margin-top: 10px; /* Adiciona espaço entre o cabeçalho e a navegação */
   }
 
+  /* Lista de itens de navegação */
   #navigation ul {
-    flex-direction: column;
-    align-items: center;
+    display: flex; /* Usar flexbox para garantir o alinhamento horizontal */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    padding: 0; /* Remove padding para melhor alinhamento */
+    flex-wrap: wrap; /* Permite quebra de linha se necessário */
   }
 
+  /* Itens de navegação */
   #navigation .nav-item {
-    margin-left: 0;
-    margin-bottom: 10px;
-  }
-}
-
-/* -------------------------------- Media Queries */
-
-/* Slightly larger container on xl screens */
-@media (min-width: 1200px) {
-  .container {
-    max-width: 80%;
-  }
-}
-
-/* Allauth form formatting */
-
-.allauth-form-inner-content p {
-    margin-top: 1.5rem; /* mt-4 */
-    color: #6c757d; /* text-secondary */
-}
-
-.allauth-form-inner-content input {
-    border-color: #000;
-    border-radius: 0;
-}
-
-.allauth-form-inner-content label:not([for='id_remember']) {
-    display: none;
-}
-
-.allauth-form-inner-content input::placeholder {
-    color: #aab7c4;
-}
-
-.allauth-form-inner-content button,
-.allauth-form-inner-content input[type='submit'] {
-	/* btn */
-	display: inline-block;
-    font-weight: 400;
-    color: #fff;
-    text-align: center;
-    vertical-align: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background-color: #000;
-    border: 1px solid #000;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: 0;
-
-    /* standard bootstrap btn transitions */
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-}
-
-.allauth-form-inner-content button:hover,
-.allauth-form-inner-content input[type='submit']:hover {	
-	color: #fff;
-    background-color: #222;
-    border-color: #222;
-}
-
-.allauth-form-inner-content a {
-	color: #17a2b8; /* text-info */
-}
-
-/* Product Form */
-
-.btn-file {
-  position: relative;
-  overflow: hidden;
-}
-
-.btn-file input[type="file"] {
-  position: absolute;
-  top: 0;
-  right: 0;
-  min-width: 100%;
-  min-height: 100%;
-  opacity: 0;
-  cursor: pointer;
-}
-
-.custom-checkbox .custom-control-label::before {
-  border-radius: 0;
-  border-color: #dc3545;
-}
-
-.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
-  background-color: #dc3545;
-  border-color: #dc3545;
-  border-radius: 0;
-}
-
-/* fixed top navbar only on medium and up */
-@media (min-width: 992px) {
-    .fixed-top-desktop-only {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 1030;
-    }
-
-    .header-container {
-        padding-top: 164px;
-    }
-
-    .navbar-toggler {
-      display: none; /* Esconde o botão no modo full screen */
-  }
-    
-}
-
-/* pad the top a bit when navbar is collapsed on mobile */
-@media (max-width: 991px) {
-  .header-container {
-      padding-top: 116px;
+    margin-left: 10px; /* Espaço horizontal entre os itens */
+    margin-bottom: 10px; /* Espaço entre os itens do menu */
+    text-align: center; /* Centraliza o texto */
   }
 
-  body {
-      height: calc(100vh - 116px);
-  }
-  .display-4.logo-font.text-black {
-    font-size: 2rem;
-  }
-  
-  .nav-link {
-    padding: 0.15rem;
-  }
-  
-  .nav-link i.fa-lg {
-    font-size: 1rem;
-  }
-  
+  /* Toggler */
   .navbar-toggler {
-    background-color: transparent; /* Torna o fundo transparente */
-    border: none; /* Remove a borda */
-}
-
-.navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgb(255, 255, 255)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-    /* Mude a cor do stroke se necessário */
-}
-
-
-  
-  #delivery-banner h4 {
-    font-size: .9rem;
+    margin: 10px auto; /* Centraliza o botão de toggle */
   }
-  
-  .btn.btn-outline-black.rounded-0,
-  .btn.btn-black.rounded-0 {
-    padding: .375rem .375rem;
+
+  /* Ícones do usuário e wishlist */
+  .list-inline-item {
+    margin: 0 10px; /* Adiciona espaço horizontal */
+    display: flex; /* Flex para alinhar ícone e texto */
+    flex-direction: column; /* Organiza ícones e texto em coluna */
+    align-items: center; /* Centraliza o conteúdo */
   }
-  
-  .btn.btn-outline-black.rounded-0.btn-lg,
-  .btn.btn-black.rounded-0.btn-lg {
-    padding: .375rem .375rem;
-    font-size: .75rem;
-  }
-  
-  .increment-qty, .decrement-qty {
-    padding: .25rem .5rem !important;
+
+  /* Aumenta a área clicável */
+  .nav-link {
+    padding: 10px 15px; /* Aumenta a área clicável */
+    text-align: center; /* Centraliza o texto */
   }
 }
-
-/* ... seu código CSS existente ... */
-
-/* Novo CSS para Navegação */
-#navigation {
-  background: #343a40; /* Cor de fundo escura */
-}
-
-.header-logo h2 {
-  color: #ffc107; /* Cor do texto do logo (amarelo) */
-  transition: color 0.3s ease; /* Transição suave na cor do logo */
-}
-
-.header-logo h2:hover {
-  color: #fff; /* Muda a cor do texto do logo ao passar o mouse */
-}
-
-#navigation .nav-link {
-  
-  padding: 10px 15px; /* Adiciona espaçamento ao redor dos links */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Transições suaves para os efeitos de hover */
-}
-
-#navigation .nav-link:hover {
-  background-color: #007bff; /* Cor de fundo ao passar o mouse (azul) */
-  color: #fff; /* Muda a cor do texto ao passar o mouse */
-  border-radius: 5px; /* Arredonda os cantos do link */
-}
-
-#navigation .dropdown-menu {
-  background: #495057; /* Cor de fundo do dropdown */
-  border-radius: 5px; /* Arredonda os cantos do dropdown */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra para o dropdown */
-}
-
-#navigation .dropdown-item {
-  color: #fff; /* Cor do texto dos itens do dropdown */
-}
-
-#navigation .dropdown-item:hover {
-  background: #007bff; /* Cor de fundo ao passar o mouse no item do dropdown */
-  color: #fff; /* Muda a cor do texto ao passar o mouse */
-}
-
-.navbar-toggler {
-  background-color: #007bff; /* Cor de fundo do botão toggle */
-  border: none; /* Remove a borda */
-  border-radius: 5px; /* Arredonda os cantos do botão toggle */
-}
-
-.navbar-toggler:hover {
-  background-color: #0056b3; /* Muda a cor ao passar o mouse */
-}
-
-.navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgb(255, 255, 255)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); /* Muda a cor do ícone */
-}
-
-
 
 
