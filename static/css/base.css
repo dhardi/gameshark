@@ -315,6 +315,135 @@ header {
   font-weight: 600;
 }
 
+/* Título */
+.wishlist-title {
+  color: #6a1b9a;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+/* Card container geral */
+.wishlist-card {
+  border-radius: 20px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+/* Efeito ao passar o mouse no card */
+.wishlist-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Container da imagem no card */
+.card-image-container {
+  position: relative;
+  height: 250px; /* Tamanho ajustável */
+  background-color: #f0f0f0; /* Cor de fundo quando não há imagem */
+  border-bottom: 5px solid #6a1b9a;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilização da imagem no card */
+.card-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.4s ease;
+}
+
+/* Zoom na imagem ao passar o mouse */
+.wishlist-card:hover .card-image-container img {
+  transform: scale(1.1);
+}
+
+/* Corpo do card */
+.card-body {
+  padding: 20px;
+}
+
+/* Título do produto */
+.card-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Texto do preço */
+.price-text {
+  color: #6a1b9a;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Texto de avaliação */
+.rating-text {
+  color: #ff9800;
+  font-size: 1rem;
+}
+
+/* Footer do card com botões */
+.card-footer {
+  background-color: #f3f3f3;
+  padding: 15px;
+}
+
+/* Botões dentro do card */
+.wishlist-btn {
+  flex-grow: 1;
+  padding: 10px;
+  margin-right: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wishlist-btn:last-child {
+  margin-right: 0;
+}
+
+/* Botão de comprar */
+.wishlist-btn.btn-primary {
+  background: linear-gradient(45deg, #6a1b9a, #8e24aa);
+  border: none;
+}
+
+/* Botão de remover */
+.wishlist-btn.btn-danger {
+  background-color: #e53935;
+}
+
+/* Efeito ao passar o mouse nos botões */
+.wishlist-btn:hover {
+  opacity: 0.9;
+}
+
+/* Estilo do botão de compra ao passar o mouse */
+.wishlist-btn.btn-primary:hover {
+  background: linear-gradient(45deg, #8e24aa, #6a1b9a);
+}
+
+/* Estilo do botão de remover ao passar o mouse */
+.wishlist-btn.btn-danger:hover {
+  background-color: #d32f2f;
+}
+
+/* Mensagem quando a lista está vazia */
+.empty-message {
+  font-size: 1.5rem;
+  margin-top: 50px;
+}
+
+
 
 
 

@@ -3,41 +3,43 @@
 
 {% block content %}
 <div class="container mt-4">
-    <h2>Your Wishlist</h2>
+    <h2 class="wishlist-title text-center mb-4">Your Wishlist</h2>
 
     {% if wishlist %}
         <div class="row row-cols-1 row-cols-md-3 g-4">
             {% for item in wishlist %}
                 <div class="col">
-                    <div class="card h-100 shadow-sm">
+                    <div class="card wishlist-card h-100">
                         <!-- Product Image with fixed size -->
-                        {% if item.product.image %}
-                            <img src="{{ item.product.image.url }}" class="card-img-top" 
-                                 alt="{{ item.product.name }}" style="object-fit: cover; height: 200px;">
-                        {% elif item.product.image_url %}
-                            <img src="{{ item.product.image_url }}" class="card-img-top" 
-                                 alt="{{ item.product.name }}" style="object-fit: cover; height: 200px;">
-                        {% else %}
-                            <img src="{% static 'images/placeholder.png' %}" class="card-img-top" 
-                                 alt="No image available" style="object-fit: cover; height: 200px;">
-                        {% endif %}
+                        <div class="card-image-container">
+                            {% if item.product.image %}
+                                <img src="{{ item.product.image.url }}" class="card-img-top"
+                                     alt="{{ item.product.name }}">
+                            {% elif item.product.image_url %}
+                                <img src="{{ item.product.image_url }}" class="card-img-top"
+                                     alt="{{ item.product.name }}">
+                            {% else %}
+                                <img src="{% static 'images/placeholder.png' %}" class="card-img-top"
+                                     alt="No image available">
+                            {% endif %}
+                        </div>
 
-                        <div class="card-body">
+                        <div class="card-body text-center">
                             <!-- Product Name -->
                             <h5 class="card-title">{{ item.product.name }}</h5>
-                            
+
                             <!-- Product Price -->
-                            <p class="card-text">
+                            <p class="card-text price-text">
                                 <strong>Price:</strong> ${{ item.product.price }}
                             </p>
-                            
+
                             <!-- Product Rating -->
                             {% if item.product.rating %}
-                                <p class="card-text">
-                                    <strong>Rating:</strong> {{ item.product.rating }} / 5
+                                <p class="card-text rating-text">
+                                    <strong>Rating:</strong> {{ item.product.rating }} / 5 ⭐
                                 </p>
                             {% else %}
-                                <p class="card-text">
+                                <p class="card-text rating-text">
                                     <strong>Rating:</strong> Not rated yet
                                 </p>
                             {% endif %}
@@ -45,23 +47,22 @@
 
                         <div class="card-footer d-flex justify-content-between">
                             <!-- Remove from Wishlist Button -->
-                            <a href="{% url 'remove_from_wishlist' item.product.id %}" class="btn btn-danger">
-                                Remove from Wishlist
+                            <a href="{% url 'remove_from_wishlist' item.product.id %}" class="btn btn-danger wishlist-btn">
+                                <i class="fas fa-trash-alt"></i> Remove
                             </a>
 
-                            
-                           <!-- Buy It Button -->
-                        <a href="{% url 'product_detail' item.product.id %}" class="btn btn-primary">
-                            Buy It
-                        </a>
-
+                            <!-- Buy It Button -->
+                            <a href="{% url 'product_detail' item.product.id %}" class="btn btn-primary wishlist-btn">
+                                <i class="fas fa-shopping-cart"></i> Buy It
+                            </a>
                         </div>
                     </div>
                 </div>
             {% endfor %}
         </div>
     {% else %}
-        <p class="text-muted">Your wishlist is currently empty.</p>
+        <p class="text-muted text-center empty-message">Your wishlist is currently empty.</p>
     {% endif %}
 </div>
+
 {% endblock %}
