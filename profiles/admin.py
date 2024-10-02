@@ -1,5 +1,18 @@
-from django.apps import AppConfig
+from django.contrib import admin
+from .models import UserProfile
+from django.utils.html import format_html  # Import format_html
 
+class UserProfileAdmin(admin.ModelAdmin):
+    list_display = ('user', 'default_phone_number', 'default_country', 'profile_picture_tag')
+    
+    readonly_fields = ('profile_picture_tag',)
 
-class ProfilesConfig(AppConfig):
-    name = 'profiles'
+    def profile_picture_tag(self, obj):
+        if obj.profile_picture:
+            return format_html('<img src="{}" style="width: 50px; height: 50px;" />'.format(obj.profile_picture.url))
+        return "No Image"
+    
+    profile_picture_tag.short_description = 'Profile Picture'
+
+# Register your UserProfile model with the custom admin class
+admin.site.register(UserProfile, UserProfileAdmin)
