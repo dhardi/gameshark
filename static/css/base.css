@@ -193,6 +193,42 @@ header {
   transform: scale(1.1);
 }
 
+/* styles.css ou seu arquivo CSS existente */
+
+/* Estilo do carrossel */
+#testimonialsCarousel .carousel-inner {
+  background-color: #1a1a1a; /* Cor de fundo escura para melhor contraste */
+  padding: 20px; /* Espaçamento interno */
+  border-radius: 8px; /* Bordas arredondadas */
+}
+
+/* Estilo das cartas dos testemunhos */
+.card {
+  background-color: #2c2c2c; /* Fundo mais escuro para as cartas */
+  color: white; /* Cor do texto em branco */
+  border: none; /* Remove a borda padrão */
+}
+
+/* Estilo do título */
+.card-title {
+  color: #00d9ff; /* Cor dourada para o nome do usuário */
+}
+
+/* Estilo do texto */
+.card-text {
+  color: #f0f0f0; /* Cor clara para o texto */
+}
+
+/* Estilo para o texto de data e classificação */
+.text-warning {
+  color: #ffcc00; /* Cor dourada para as estrelas */
+}
+
+.text-muted {
+  color: #999999; /* Cor mais clara para a data */
+}
+
+
 /* Seção de Reviews */
 .reviews-section {
   background-color: #f9f9f9;
@@ -254,6 +290,35 @@ header {
 .review-btn .fas {
   font-size: 1rem;
 }
+
+.hero-banner {
+  background-image: url('../images/hero.jpg'); /* Ajuste o caminho conforme necessário */
+  background-size: cover;
+  background-position: center;
+  height: 60vh; /* Ajuste a altura conforme necessário */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.hero-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Efeito de escurecimento */
+  z-index: 1; /* Coloca a camada de escurecimento atrás do texto */
+}
+
+.hero-banner h1, .hero-banner p {
+  z-index: 2; /* Coloca o texto acima do escurecimento */
+  color: white; /* Cor do texto para garantir legibilidade */
+}
+
 
 /* Container de adição de review */
 .add-review-container {
@@ -366,7 +431,7 @@ header {
 .card-title {
   font-size: 1.4rem;
   font-weight: bold;
-  color: #333;
+  
   margin-bottom: 10px;
 }
 

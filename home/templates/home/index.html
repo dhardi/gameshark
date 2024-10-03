@@ -2,15 +2,10 @@
 {% load static %}
 
 {% block page_header %}
-<div class="container header-container my-4">
-    <div class="row align-items-center">
-        <div class="col-md-6">
-            <h1 class="display-4">Welcome to GameShark</h1>
-            <p class="lead">Shop the latest products and enjoy hot deals!</p>
-        </div>
-        <div class="col-md-6 text-center">
-            <img src="{% static 'images/logo.jpg' %}" alt="Logo" class="img-fluid" style="max-width: 200px;">
-        </div>
+<div class="hero-banner">
+    <div class="container text-center">
+        <h1 class="display-4">Welcome to GameShark</h1>
+        <p class="lead">Shop the latest products and enjoy hot deals!</p>
     </div>
 </div>
 {% endblock %}
@@ -23,8 +18,8 @@
     <div class="row">
         {% for product in hot_deals %}
         <div class="col-md-4 mb-4">
-            <div class="card h-100">
-                <img src="{{ product.image_url }}" class="card-img-top" alt="{{ product.name }}" style="max-height: 250px; object-fit: cover;">
+            <div class="card h-100 shadow-sm border-light">
+                <img src="{{ product.image_url }}" class="card-img-top" alt="{{ product.name }}" style="max-height: 250px; object-fit: cover; transition: transform 0.3s;">
                 <div class="card-body text-center">
                     <h5 class="card-title">{{ product.name }}</h5>
                     <p class="card-text"><strong>${{ product.price }}</strong> <span class="text-danger">({{ product.discount }}% OFF)</span></p>
@@ -48,7 +43,7 @@
             <div class="carousel-item {% if forloop.first %}active{% endif %}">
                 <div class="card text-center mx-auto" style="max-width: 600px;">
                     <div class="card-body">
-                        <img src="{{ testimonial.user.profile_picture }}" class="rounded-circle mb-3" alt="User Picture" style="width: 80px; height: 80px; object-fit: cover;">
+                        <img src="{% if testimonial.user.userprofile.profile_picture %}{{ testimonial.user.userprofile.profile_picture.url }}{% else %}{% static 'images/default_profile_pic.jpg' %}{% endif %}" class="rounded-circle mb-3" alt="User Picture" style="width: 80px; height: 80px; object-fit: cover;">
                         <h5 class="card-title">{{ testimonial.user.username }}</h5>
                         <p class="card-text">{{ testimonial.text }}</p>
                         <p class="text-warning mb-1">⭐ {{ testimonial.rating }} / 5</p>
@@ -69,4 +64,9 @@
     </div>
 </div>
 
+
+{% endblock %}
+
+{% block extra_styles %}
+<link rel="stylesheet" href="{% static 'css/styles.css' %}"> <!-- Certifique-se de ajustar o caminho se necessário -->
 {% endblock %}
