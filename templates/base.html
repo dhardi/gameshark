@@ -87,7 +87,7 @@
                             <a href="{% url 'wishlist_view' %}" class="text-black nav-link">
                                 <i class="fa fa-heart-o fa-lg"></i>
                                 <p class="my-0">Your Wishlist</p>
-                                <div class="qty">2</div>
+                               
                             </a>
                         </li>
 
@@ -110,29 +110,24 @@
         </div>
     </header>
   
-       <!--Search fild-->
-       <div class="col-md-6">
-        <div class="header-search">
-            <form method="GET" action="{% url 'products' %}">
-                <select class="input-select">
-                    <option value="0">All Categories</option>
-                    <option value="1">Category 01</option>
-                    <option value="1">Category 02</option>
-                </select>
-                <input class="input" type="text" name="q" placeholder="Search our site">
-                <button class="search-btn" type="submit">Search</button>
-            </form>
-        </div>
+<!--Search Field-->
+<div class="col-md-6">
+    <div class="header-search">
+        <form method="GET" action="{% url 'products' %}" class="search-form">
+            <input class="input search-input" type="text" name="q" placeholder="Search our site">
+            <button class="search-btn" type="submit"><i class="fas fa-search"></i></button>
+        </form>
     </div>
-<!--Search end-->
+</div>
+<!--Search End-->
+
+
 
 <!-- NAVIGATION -->
 <nav id="navigation" class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
         <div class="header-logo">
-            <a href="#" class="logo">
-                <h2>GameShark</h2>
-            </a>
+         
         </div>
         
         <!-- Toggle Button for Mobile Navigation -->
@@ -184,6 +179,7 @@
 
 
 
+
     {% if messages %}
     <div class="message-container">
         {% for message in messages %}
@@ -214,6 +210,29 @@
     </script>
     {% endblock %}
 
-    
+    <!-- Footer Section -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content text-center py-4">
+            <!-- Social Media Icons -->
+            <div class="social-icons mb-3">
+                <a href="https://www.facebook.com" target="_blank" class="social-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://github.com" target="_blank" class="social-icon">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" class="social-icon">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+
+            <!-- Copyright Info -->
+            <div class="footer-copyright">
+                <p class="text-white">© 2024 GameShark. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
   </body>
 </html>

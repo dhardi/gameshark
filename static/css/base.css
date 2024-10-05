@@ -40,15 +40,58 @@ header {
 }
 
 /* Estilo do formulário de busca */
+/* Estilos gerais do campo de pesquisa */
 .header-search {
-  margin: 0 20px;
-  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
-.header-search form {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
+.search-input {
+  width: 100%;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 30px;
+  outline: none;
+  transition: all 0.3s ease;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Efeito hover e foco no campo de pesquisa */
+.search-input:focus {
+  border-color: #007bff;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+}
+
+/* Estilos do botão de busca */
+.search-btn {
+  
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  color: #007bff;
+  transition: color 0.3s ease;
+  font-size: 18px;
+}
+
+.search-btn:hover {
+  color: #0056b3;
+}
+
+/* Ícone de pesquisa */
+.search-btn i {
+  font-size: 18px;
+}
+
+.search-btn:focus {
+  outline: none;
 }
 
 .input-select,
@@ -75,6 +118,12 @@ header {
 
 .search-btn:hover {
   background: #0056b3;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 /* Navegação */
@@ -203,7 +252,7 @@ header {
 }
 
 /* Estilo das cartas dos testemunhos */
-.card {
+.cardtestimonial {
   background-color: #2c2c2c; /* Fundo mais escuro para as cartas */
   color: white; /* Cor do texto em branco */
   border: none; /* Remove a borda padrão */
@@ -215,9 +264,7 @@ header {
 }
 
 /* Estilo do texto */
-.card-text {
-  color: #f0f0f0; /* Cor clara para o texto */
-}
+
 
 /* Estilo para o texto de data e classificação */
 .text-warning {
@@ -454,6 +501,42 @@ header {
   padding: 15px;
 }
 
+/* Estilo geral do Footer */
+.footer {
+  background-color: #1e1e2e;
+  color: white;
+  padding: 20px 0;
+  margin-top: 50px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Ícones de Redes Sociais */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icon {
+  color: #fff;
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #007bff; /* Cor azul para hover */
+}
+
+/* Texto de Copyright */
+.footer-copyright {
+  margin-top: 15px;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
 /* Botões dentro do card */
 .wishlist-btn {
   flex-grow: 1;
@@ -556,6 +639,21 @@ header {
     padding: 10px 15px; /* Aumenta a área clicável */
     text-align: center; /* Centraliza o texto */
   }
+  .search-input {
+    font-size: 14px;
+    padding: 8px 15px;
+}
+
+.search-btn i {
+    font-size: 16px;
+}
+.social-icons {
+  gap: 15px;
+}
+
+.footer-copyright {
+  font-size: 12px;
+}
 }
 
 
