@@ -310,6 +310,15 @@ This **Entity-Relationship Diagram (ERD)** represents the structure of the e-com
 
 
 
+# Deployment
+
+This document provides a step-by-step guide for deploying your project. All deployment steps are available at the following link:
+
+- [Complete Deployment Guide](https://github.com/dhardi/gameshark/blob/main/Deployment.md)
+
+
+
+
 
 
 
