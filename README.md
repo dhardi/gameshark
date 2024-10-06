@@ -155,43 +155,43 @@ This **Entity-Relationship Diagram (ERD)** represents the structure of the e-com
 ---
 
 ## Products
-![Products](path_to_your_image.png)
+![Products](https://github.com/dhardi/gameshark/blob/main/static/images/products_wireframes.png)
 *Description:* The products page layout that displays a grid of available products, filters, and sorting options.
 
 ---
 
 ## Product Detail
-![Product Detail](path_to_your_image.png)
+![Product Detail](https://github.com/dhardi/gameshark/blob/main/static/images/product_detail_wireframe.png)
 *Description:* Detailed view of a selected product, including images, descriptions, reviews, and the add-to-cart button.
 
 ---
 
 ## My Profile
-![My Profile](path_to_your_image.png)
+![My Profile](https://github.com/dhardi/gameshark/blob/main/static/images/my_profile.png)
 *Description:* User profile page that allows users to view and edit their personal information, including order history and saved items.
 
 ---
 
 ## Wishlist
-![Wishlist](path_to_your_image.png)
+![Wishlist](https://github.com/dhardi/gameshark/blob/main/static/images/wishlist_wireframes.png)
 *Description:* A dedicated page for users to view and manage their saved items for future purchases.
 
 ---
 
 ## Bag
-![Bag](path_to_your_image.png)
+![Bag](https://github.com/dhardi/gameshark/blob/main/static/images/bag_wireframes.png)
 *Description:* Shopping cart layout showing selected items, their prices, and a checkout button.
 
 ---
 
 ## Review
-![Review](path_to_your_image.png)
+![Review](https://github.com/dhardi/gameshark/blob/main/static/images/review_wireframes.png)
 *Description:* Page for users to submit and read product reviews, including star ratings and written feedback.
 
 ---
 
 ## Testimonial
-![Testimonial](path_to_your_image.png)
+![Testimonial](https://github.com/dhardi/gameshark/blob/main/static/images/testimonial_wireframes.png)
 *Description:* Section for displaying user testimonials and feedback about the e-commerce platform.
 
 
