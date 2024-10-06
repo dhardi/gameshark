@@ -460,13 +460,13 @@ header {
     align-items: flex-start;
   }
 
-  /* Logo centralizado no topo */
+ 
   .header-logo {
     text-align: center;
     width: 100%;
   }
 
-  /* Campo de busca ocupa toda a largura e ajusta o input */
+  
   .header-search {
     width: 100%;
     margin-top: 10px;
@@ -476,7 +476,7 @@ header {
     width: calc(100% - 40px);
   }
 
-  /* Navegação adaptada para telas menores */
+  
   #navigation {
     width: 100%;
     justify-content: center;
@@ -501,7 +501,7 @@ header {
   }
 }
 
-/* Ajustes adicionais para telas menores de 480px */
+
 @media (max-width: 480px) {
   .search-input {
     width: 100%;

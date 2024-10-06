@@ -194,6 +194,57 @@ This **Entity-Relationship Diagram (ERD)** represents the structure of the e-com
 ![Testimonial](path_to_your_image.png)
 *Description:* Section for displaying user testimonials and feedback about the e-commerce platform.
 
+
+#  Features
+
+## Home
+![Home](path_to_your_image.png)
+
+
+---
+
+## Products
+![Products](path_to_your_image.png)
+
+
+---
+
+## Product Detail
+![Product Detail](path_to_your_image.png)
+
+
+---
+
+## My Profile
+![My Profile](path_to_your_image.png)
+
+
+---
+
+## Wishlist
+![Wishlist](path_to_your_image.png)
+
+
+---
+
+## Bag
+![Bag](path_to_your_image.png)
+
+
+---
+
+## Review
+![Review](path_to_your_image.png)
+
+
+---
+
+## Testimonial
+![Testimonial](path_to_your_image.png)
+
+
+
+
 # Color Scheme 
 
 ## Primary Colors
