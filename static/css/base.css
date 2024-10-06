@@ -452,3 +452,70 @@ header {
 .footer .social-icons a:hover i {
   color: #00bcd4;
 }
+
+
+@media (max-width: 768px) {
+  #header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Logo centralizado no topo */
+  .header-logo {
+    text-align: center;
+    width: 100%;
+  }
+
+  /* Campo de busca ocupa toda a largura e ajusta o input */
+  .header-search {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .search-input {
+    width: calc(100% - 40px);
+  }
+
+  /* Navegação adaptada para telas menores */
+  #navigation {
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  #navigation ul {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .nav-item {
+    margin-left: 10px;
+  }
+
+  .nav-link p {
+    font-size: 12px;
+  }
+
+  .fa-lg {
+    font-size: 20px;
+  }
+}
+
+/* Ajustes adicionais para telas menores de 480px */
+@media (max-width: 480px) {
+  .search-input {
+    width: 100%;
+  }
+
+  .search-btn {
+    font-size: 14px;
+  }
+
+  .nav-link {
+    font-size: 14px;
+  }
+
+  .nav-link p {
+    font-size: 10px;
+  }
+}

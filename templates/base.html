@@ -57,6 +57,17 @@
                 </a>
             </div>
 
+            <!--Search Field-->
+<div class="col-md-6">
+    <div class="header-search">
+        <form method="GET" action="{% url 'products' %}" class="search-form">
+            <input class="input search-input" type="text" name="q" placeholder="Search our site">
+            <button class="search-btn" type="submit"><i class="fas fa-search"></i></button>
+        </form>
+    </div>
+</div>
+<!--Search End-->
+
             <nav id="navigation">
                 <div class="container">
                     <ul class="list-inline list-unstyled d-flex justify-content-center">
@@ -110,16 +121,7 @@
         </div>
     </header>
   
-<!--Search Field-->
-<div class="col-md-6">
-    <div class="header-search">
-        <form method="GET" action="{% url 'products' %}" class="search-form">
-            <input class="input search-input" type="text" name="q" placeholder="Search our site">
-            <button class="search-btn" type="submit"><i class="fas fa-search"></i></button>
-        </form>
-    </div>
-</div>
-<!--Search End-->
+
 
 
 
