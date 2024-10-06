@@ -149,7 +149,7 @@ This **Entity-Relationship Diagram (ERD)** represents the structure of the e-com
 # Wireframes
 
 ## Home
-![Home](path_to_your_image.png)
+![Home](https://github.com/dhardi/gameshark/blob/main/static/images/home_wireframes.png)
 *Description:* The homepage layout showcasing featured products, categories, and promotional banners.
 
 ---
@@ -197,49 +197,65 @@ This **Entity-Relationship Diagram (ERD)** represents the structure of the e-com
 
 #  Features
 
-## Home
+## Home Desktop
 ![Home](path_to_your_image.png)
 
-
+## Home Mobile
+![Home](path_to_your_image.png)
 ---
 
-## Products
+## Products Desktop
 ![Products](path_to_your_image.png)
 
+## Products Mobile
+![Products](path_to_your_image.png)
 
 ---
 
-## Product Detail
+## Product Detail Desktop
 ![Product Detail](path_to_your_image.png)
 
+## Product Detail Mobile
+![Product Detail](path_to_your_image.png)
 
 ---
 
-## My Profile
+## My Profile Desktop
 ![My Profile](path_to_your_image.png)
 
-
+## My Profile Mobile
+![My Profile](path_to_your_image.png)
 ---
 
-## Wishlist
+## Wishlist Desktop
+![Wishlist](path_to_your_image.png)
+
+## Wishlist Mobile
 ![Wishlist](path_to_your_image.png)
 
 
 ---
 
-## Bag
+## Bag Desktop
 ![Bag](path_to_your_image.png)
 
-
+## Bag Mobile
+![Bag](path_to_your_image.png)
 ---
 
-## Review
+## Review Desktop
+![Review](path_to_your_image.png)
+
+## Review Mobile
 ![Review](path_to_your_image.png)
 
 
 ---
 
-## Testimonial
+## Testimonial Desktop
+![Testimonial](path_to_your_image.png)
+
+## Testimonial Mobile
 ![Testimonial](path_to_your_image.png)
 
 
