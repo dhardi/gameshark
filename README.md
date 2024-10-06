@@ -195,68 +195,77 @@ This **Entity-Relationship Diagram (ERD)** represents the structure of the e-com
 *Description:* Section for displaying user testimonials and feedback about the e-commerce platform.
 
 
-#  Features
+# Features Overview
 
-## Home Desktop
-![Home](path_to_your_image.png)
+## Home Page
+- **Desktop View:**
+  ![Home Desktop](https://github.com/dhardi/gameshark/blob/main/static/images/menu_hero.png)
 
-## Home Mobile
-![Home](path_to_your_image.png)
----
-
-## Products Desktop
-![Products](path_to_your_image.png)
-
-## Products Mobile
-![Products](path_to_your_image.png)
+- **Mobile View:**
+  ![Home Mobile](https://github.com/dhardi/gameshark/blob/main/static/images/home_mobile.png)
 
 ---
 
-## Product Detail Desktop
-![Product Detail](path_to_your_image.png)
+## Product Listings
+- **Desktop View:**
+  ![Products Desktop](https://github.com/dhardi/gameshark/blob/main/static/images/produtcs_list.png)
 
-## Product Detail Mobile
-![Product Detail](path_to_your_image.png)
-
----
-
-## My Profile Desktop
-![My Profile](path_to_your_image.png)
-
-## My Profile Mobile
-![My Profile](path_to_your_image.png)
----
-
-## Wishlist Desktop
-![Wishlist](path_to_your_image.png)
-
-## Wishlist Mobile
-![Wishlist](path_to_your_image.png)
-
+- **Mobile View:**
+  ![Products Mobile](https://github.com/dhardi/gameshark/blob/main/static/images/products_mobile.png)
 
 ---
 
-## Bag Desktop
-![Bag](path_to_your_image.png)
+## Product Detail Page
+- **Desktop View:**
+  ![Product Detail Desktop](https://github.com/dhardi/gameshark/blob/main/static/images/produtc_detail_rename.png)
 
-## Bag Mobile
-![Bag](path_to_your_image.png)
----
-
-## Review Desktop
-![Review](path_to_your_image.png)
-
-## Review Mobile
-![Review](path_to_your_image.png)
-
+- **Mobile View:**
+  ![Product Detail Mobile](https://github.com/dhardi/gameshark/blob/main/static/images/product_detail_mobile.png)
 
 ---
 
-## Testimonial Desktop
-![Testimonial](path_to_your_image.png)
+## User Profile
+- **Desktop View:**
+  ![My Profile Desktop](https://github.com/dhardi/gameshark/blob/main/static/images/profile.png)
 
-## Testimonial Mobile
-![Testimonial](path_to_your_image.png)
+- **Mobile View:**
+  ![My Profile Mobile](https://github.com/dhardi/gameshark/blob/main/static/images/profile_mobile.png)
+
+---
+
+## Wishlist
+- **Desktop View:**
+  ![Wishlist Desktop](https://github.com/dhardi/gameshark/blob/main/static/images/wishlist.png)
+
+- **Mobile View:**
+  ![Wishlist Mobile](https://github.com/dhardi/gameshark/blob/main/static/images/wishlist_mobile.png)
+
+---
+
+## Shopping Bag
+- **Desktop View:**
+  ![Bag Desktop](https://github.com/dhardi/gameshark/blob/main/static/images/bag.png)
+
+- **Mobile View:**
+  ![Bag Mobile](https://github.com/dhardi/gameshark/blob/main/static/images/bag_mobile.png)
+
+---
+
+## Reviews
+- **Desktop View:**
+  ![Review Desktop](https://github.com/dhardi/gameshark/blob/main/static/images/review_desktop.png)
+
+- **Mobile View:**
+  ![Review Mobile](https://github.com/dhardi/gameshark/blob/main/static/images/review_add_mobile.png)
+
+---
+
+## Testimonials
+- **Desktop View:**
+  ![Testimonial Desktop](https://github.com/dhardi/gameshark/blob/main/static/images/testimonial_add.png)
+
+- **Mobile View:**
+  ![Testimonial Mobile](https://github.com/dhardi/gameshark/blob/main/static/images/testimonial_add_mobile2.png)
 
 
 
