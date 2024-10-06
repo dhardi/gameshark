@@ -194,7 +194,7 @@ This **Entity-Relationship Diagram (ERD)** represents the structure of the e-com
 ![Testimonial](path_to_your_image.png)
 *Description:* Section for displaying user testimonials and feedback about the e-commerce platform.
 
-# Color Scheme for E-Commerce Website
+# Color Scheme 
 
 ## Primary Colors
 
