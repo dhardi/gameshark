@@ -5,10 +5,9 @@
 <div class="container mt-5">
     <h2>Testimonials</h2>
 
-    <!-- Aqui, certifique-se de passar o order_number corretamente -->
-    <!-- <a href="{% url 'add_testimonial' order.order_number %}" class="btn btn-success mb-3">Write a Testimonial</a>-->
+    
 
-    <!-- Verifique se a lista de testimonials existe e não está vazia -->
+    
     {% if testimonials %}
         {% for testimonial in testimonials %}
         <div class="card mb-3">
@@ -16,7 +15,7 @@
                 <h5 class="card-title">{{ testimonial.user.username }}</h5>
                 <p class="card-text">{{ testimonial.text }}</p>
                 <div>
-                    <!-- Exibir estrelas cheias e vazias com base na avaliação -->
+                    
                     {% for i in "12345" %}
                         {% if forloop.counter <= testimonial.rating %}
                             <i class="fas fa-star text-warning"></i>
@@ -27,7 +26,7 @@
                 </div>
                 <p class="card-text"><small class="text-muted">Posted on {{ testimonial.created_at }}</small></p>
 
-                <!-- Mostrar o botão de deletar apenas se for o proprietário do testemunho -->
+                
                 {% if testimonial.user == request.user %}
                 <a href="{% url 'edit_testimonial' testimonial.id %}" class="btn btn-warning">Edit</a>
                 <a href="{% url 'delete_testimonial' testimonial.id %}" class="btn btn-danger">Delete</a>

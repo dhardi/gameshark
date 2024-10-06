@@ -1,14 +1,14 @@
-# models.py do app testimonial
+
 
 from django.db import models
 from django.contrib.auth.models import User
-from checkout.models import Order  # Importando a Order para relacionamento
+from checkout.models import Order
 
 class Testimonial(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    order = models.OneToOneField(Order, on_delete=models.CASCADE, null=False, blank=False)  # Relacionamento com Order
+    order = models.OneToOneField(Order, on_delete=models.CASCADE, null=False, blank=False)
     text = models.TextField()
-    rating = models.IntegerField(choices=[(i, i) for i in range(1, 6)])  # Rating de 1 a 5 estrelas
+    rating = models.IntegerField(choices=[(i, i) for i in range(1, 6)])
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

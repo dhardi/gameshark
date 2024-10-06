@@ -12,7 +12,7 @@ class UserProfileForm(forms.ModelForm):
             'default_street_address1',
             'default_street_address2',
             'default_county',
-            'profile_picture'  # Incluindo o campo profile_picture
+            'profile_picture'  
         ]
 
     def __init__(self, *args, **kwargs):
@@ -38,7 +38,7 @@ class UserProfileForm(forms.ModelForm):
             self.fields[field].widget.attrs['class'] = 'border-black rounded-0 profile-form-input'
             self.fields[field].label = False
 
-        # Certifique-se de que o campo profile_picture é opcional e tenha um rótulo amigável
+        
         if 'profile_picture' in self.fields:
 
             self.fields['profile_picture'].required = False

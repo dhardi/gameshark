@@ -66,14 +66,14 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
 
-    # Verifique se o usuário já deixou um review para este produto
+    
     user_has_reviewed = False
     if request.user.is_authenticated:
         user_has_reviewed = Review.objects.filter(product=product, user=request.user).exists()
 
     context = {
         'product': product,
-        'user_has_reviewed': user_has_reviewed,  # Adicione a flag ao contexto
+        'user_has_reviewed': user_has_reviewed,
     }
 
     return render(request, 'products/product_detail.html', context)

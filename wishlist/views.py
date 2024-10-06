@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
-from django.contrib import messages  # Import the messages framework
+from django.contrib import messages
 from products.models import Product
 from .models import Wishlist
 
@@ -10,7 +10,7 @@ def wishlist_view(request):
     wishlist = Wishlist.objects.filter(user=request.user)
     return render(request, 'wishlist/wishlist.html', {'wishlist': wishlist})
 
-# Add a product to wishlist with success message
+
 @login_required
 def add_to_wishlist(request, product_id):
     product = get_object_or_404(Product, id=product_id)
@@ -21,11 +21,10 @@ def add_to_wishlist(request, product_id):
     else:
         messages.info(request, f'{product.name} is already in your wishlist.')
     
-    # Redireciona de volta para a mesma página de onde veio a requisição (HTTP_REFERER)
     return redirect(request.META.get('HTTP_REFERER', 'wishlist:wishlist_view'))
 
 
-# Remove a product from wishlist with success message
+
 @login_required
 def remove_from_wishlist(request, product_id):
     product = get_object_or_404(Product, id=product_id)

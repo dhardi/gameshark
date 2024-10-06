@@ -1,4 +1,4 @@
-# views.py do app testimonial
+
 
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
@@ -7,17 +7,17 @@ from .models import Testimonial
 from checkout.models import Order
 from .forms import TestimonialForm
 
-# Função para exibir a lista de testimonials
+
 def testimonial_list(request):
     testimonials = Testimonial.objects.all()
-    order = Order.objects.filter(user_profile=request.user.userprofile).last()  # Pega o último pedido do usuário
+    order = Order.objects.filter(user_profile=request.user.userprofile).last()
     context = {
         'testimonials': testimonials,
-        'order': order,  # Certifique-se de passar o order com order_number
+        'order': order,
     }
     return render(request, 'testimonial/testimonial_list.html', context)
 
-# Função para adicionar um testimonial (já foi descrita anteriormente)
+
 @login_required
 def add_testimonial(request, order_number):
     order = get_object_or_404(Order, order_number=order_number, user_profile=request.user.userprofile)
@@ -47,7 +47,7 @@ def add_testimonial(request, order_number):
     }
     return render(request, 'testimonial/add_testimonial.html', context)
 
-# Função para deletar um testimonial
+
 @login_required
 def delete_testimonial(request, id):
     testimonial = get_object_or_404(Testimonial, id=id)
@@ -68,7 +68,7 @@ def edit_testimonial(request, testimonial_id):
         if form.is_valid():
             form.save()
             messages.success(request, 'Your testimonial has been updated successfully.')
-            return redirect('testimonial_list')  # Ou outra página para redirecionar após a edição
+            return redirect('testimonial_list')
     else:
         form = TestimonialForm(instance=testimonial)
 

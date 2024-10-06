@@ -1,6 +1,6 @@
 from django.contrib import admin
 from .models import UserProfile
-from django.utils.html import format_html  # Import format_html
+from django.utils.html import format_html  
 
 class UserProfileAdmin(admin.ModelAdmin):
     list_display = ('user', 'default_phone_number', 'default_country', 'profile_picture_tag')
