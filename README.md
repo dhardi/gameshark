@@ -75,7 +75,9 @@ Gameshark is dedicated to creating a vibrant online shopping environment for gam
 
 # Entity-Relationship Diagram (ERD) for E-Commerce Website
 
-![E-Commerce ER Diagram](path_to_your_image.png)
+![E-Commerce pt1](https://github.com/dhardi/gameshark/blob/main/static/images/diagrampt1.png)
+
+![E-Commerce pt2](https://github.com/dhardi/gameshark/blob/main/static/images/diagramp2.png)
 
 ## Overview
 This **Entity-Relationship Diagram (ERD)** represents the structure of the e-commerce system, showcasing the relationships between the major entities in the database. The entities and their relationships are essential to manage the interactions and data flow within the system. Below is a detailed explanation of each entity and their relationships.
