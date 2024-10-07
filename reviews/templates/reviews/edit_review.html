@@ -51,7 +51,7 @@
 
 {% block postloadjs %}
 <script>
-// Script para tornar as estrelas interativas na página de edição
+
 document.addEventListener("DOMContentLoaded", function () {
     const stars = document.querySelectorAll("#star-rating .fa-star");
     const ratingInput = document.getElementById("id_rating");
@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Iniciar com o valor selecionado
+    
     highlightStars(ratingInput.value);
 });
 </script>

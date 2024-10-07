@@ -4,6 +4,7 @@ from django.contrib import messages
 from products.models import Product
 from .models import Wishlist
 
+
 # View wishlist of the logged-in user
 @login_required
 def wishlist_view(request):
@@ -14,15 +15,20 @@ def wishlist_view(request):
 @login_required
 def add_to_wishlist(request, product_id):
     product = get_object_or_404(Product, id=product_id)
-    wishlist_item, created = Wishlist.objects.get_or_create(user=request.user, product=product)
-    
-    if created:
-        messages.success(request, f'{product.name} has been added to your wishlist.')
-    else:
-        messages.info(request, f'{product.name} is already in your wishlist.')
-    
-    return redirect(request.META.get('HTTP_REFERER', 'wishlist:wishlist_view'))
+    wishlist_item, created = Wishlist.objects.get_or_create(
+        user=request.user, product=product
+    )
 
+    if created:
+        messages.success(
+            request, f'{product.name} has been added to your wishlist.'
+        )
+    else:
+        messages.info(
+            request, f'{product.name} is already in your wishlist.'
+        )
+
+    return redirect(request.META.get('HTTP_REFERER', 'wishlist:wishlist_view'))
 
 
 @login_required
@@ -30,6 +36,8 @@ def remove_from_wishlist(request, product_id):
     product = get_object_or_404(Product, id=product_id)
     Wishlist.objects.filter(user=request.user, product=product).delete()
 
-    messages.success(request, f'{product.name} has been removed from your wishlist.')  # Success message for removal
+    messages.success(
+        request, f'{product.name} has been removed from your wishlist.'
+    )
 
     return redirect('wishlist_view')

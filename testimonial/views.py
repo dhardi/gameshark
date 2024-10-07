@@ -1,5 +1,3 @@
-
-
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
@@ -20,15 +18,19 @@ def testimonial_list(request):
 
 @login_required
 def add_testimonial(request, order_number):
-    order = get_object_or_404(Order, order_number=order_number, user_profile=request.user.userprofile)
-    
+    order = get_object_or_404(
+        Order, order_number=order_number, user_profile=request.user.userprofile
+    )
+
     try:
         Testimonial.objects.get(order=order)
-        messages.error(request, "You have already submitted a testimonial for this order.")
+        messages.error(
+            request, "You have already submitted a testimonial for this order."
+        )
         return redirect('testimonial_list')
     except Testimonial.DoesNotExist:
         pass
-    
+
     if request.method == 'POST':
         form = TestimonialForm(request.POST)
         if form.is_valid():
@@ -55,19 +57,24 @@ def delete_testimonial(request, id):
         testimonial.delete()
         messages.success(request, "Testimonial deleted successfully!")
     else:
-        messages.error(request, "You don't have permission to delete this testimonial.")
+        messages.error(
+            request, "You don't have permission to delete this testimonial."
+        )
     return redirect('testimonial_list')
 
 
 @login_required
 def edit_testimonial(request, testimonial_id):
-    testimonial = get_object_or_404(Testimonial, id=testimonial_id, user=request.user)
+    testimonial = get_object_or_404(
+        Testimonial, id=testimonial_id, user=request.user)
 
     if request.method == 'POST':
         form = TestimonialForm(request.POST, instance=testimonial)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Your testimonial has been updated successfully.')
+            messages.success(
+                request, 'Your testimonial has been updated successfully.'
+            )
             return redirect('testimonial_list')
     else:
         form = TestimonialForm(instance=testimonial)
