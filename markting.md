@@ -87,4 +87,4 @@
 
 ## Conclusion
 
-This marketing plan outlines a strategic approach for GameShark to effectively reach its target audience and achieve business goals. Leveraging digital marketing strategies, engaging content, and a focus on community building will help create a strong brand presence in the competitive e-commerce landscape. Adjust and refine this plan as necessary for your final project!
+This marketing plan outlines a strategic approach for GameShark to effectively reach its target audience and achieve business goals. Leveraging digital marketing strategies, engaging content, and a focus on community building will help create a strong brand presence in the competitive e-commerce landscape. 
