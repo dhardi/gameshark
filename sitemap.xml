@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/accounts/signup/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/accounts/login/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/accounts/login/?next=/wishlist/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/bag/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/?category=deals</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/?category=consoles</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/?category=playstation_games</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/?category=xbox_games</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/?category=nintendo_games</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/?category=pc_games</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/?category=playstation_accessories</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/?category=xbox_accessories</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/?category=nintendo_accessories</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/?category=pc_accessories</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/160/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/161/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/162/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/accounts/password/reset/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/accounts/signup/?next=%2Fwishlist%2F</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/1/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/4/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/2/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/22/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/23/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/42/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/43/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/62/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/81/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/82/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/91/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/92/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/101/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/102/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/111/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/112/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/121/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/122/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/123/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/124/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/125/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/126/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/127/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/128/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/129/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/130/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/3/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/63/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/131/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/132/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/133/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/134/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/135/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/136/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/140/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/142/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/143/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/144/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/145/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/146/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/147/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/148/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/149/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/152/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/153/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/154/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/155/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/156/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/157/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/158/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/products/159/</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://gameshark-4e405cfc132a.herokuapp.com/accounts/login/?next=%2Fwishlist%2F</loc>
+  <lastmod>2024-10-08T16:00:13+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+
+
+</urlset>

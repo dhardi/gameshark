@@ -1,0 +1,4 @@
+user-agent:*
+Disallow:/accounts/
+Disallow:/bag/
+Sitemap: https://gameshark-4e405cfc132a.herokuapp.com/sitemap.xml
