@@ -320,7 +320,13 @@ This document provides a step-by-step guide for deploying your project. All depl
 
 This document provides Marketing ideas and planning 
 
-- [Complete Deployment Guide](https://github.com/dhardi/gameshark/blob/main/markting.md)
+- [Marketing](https://github.com/dhardi/gameshark/blob/main/markting.md)
+
+# Testing
+
+all the testing you can find here
+
+- [Testing](https://github.com/dhardi/gameshark/blob/main/TESTING.md)
 
 
 

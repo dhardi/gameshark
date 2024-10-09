@@ -9,7 +9,6 @@
   - [CSS](#css)
   - [JavaScript](#javascript)
   - [Python - PEP8 - using pycodestyle](#python---pep8---using-pycodestyle)
-  - [Wave Aim Accessibility Checker](#wave-aim-accessibility-checker)
   - [Within the Footer](#within-the-footer)
   - [Lighthouse Scores](#lighthouse-scores)
     - [Home Page](#home-page)
@@ -70,22 +69,20 @@ Below is a list of bugs and fixes found while creating a feature. You can find o
 ##### CSS
 [Description of CSS validation]
 
-![CSS Validation Image](link-to-your-image)
+![CSS Validation Image](https://github.com/dhardi/gameshark/blob/main/static/images/css_validator.png)
 
 ##### JavaScript
 [Description of JavaScript validation]
 
-![JavaScript Validation Image](link-to-your-image)
+![Bag](https://github.com/dhardi/gameshark/blob/main/static/images/bag_java.png)
+
+![Country](https://github.com/dhardi/gameshark/blob/main/static/images/coutry_java.png)
 
 ##### Python - PEP8 - using pycodestyle
 [Description of Python validation]
 
-![Python Validation Image](link-to-your-image)
+![Checkout admin](https://github.com/dhardi/gameshark/blob/main/static/images/admin_checkout_python.png)
 
-##### Wave Aim Accessibility Checker
-[Description of accessibility checking process]
-
-![Accessibility Checker Image](link-to-your-image)
 
 #### Within the Footer
 [Description of footer accessibility issues]
