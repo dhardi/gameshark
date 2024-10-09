@@ -6,14 +6,26 @@ from checkout.models import Order
 from .forms import TestimonialForm
 
 
+# list the testimonaails
+
+
 def testimonial_list(request):
     testimonials = Testimonial.objects.all()
-    order = Order.objects.filter(user_profile=request.user.userprofile).last()
+
+    order = None
+    if request.user.is_authenticated and hasattr(request.user, 'userprofile'):
+        order = Order.objects.filter(
+            user_profile=request.user.userprofile).last()
+
     context = {
         'testimonials': testimonials,
         'order': order,
     }
+
     return render(request, 'testimonial/testimonial_list.html', context)
+
+
+# check if you already submmit testimonial
 
 
 @login_required

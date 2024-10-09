@@ -10,7 +10,7 @@ from products.models import Product
 def add_review(request, product_id):
     product = get_object_or_404(Product, id=product_id)
 
-    # Verifica se o usuário já fez um review deste produto
+    # Verify if user aalredy review this product
     existing_review = Review.objects.filter(
         product=product, user=request.user).first()
 
@@ -33,7 +33,7 @@ def add_review(request, product_id):
     return render(
         request, 'reviews/add_review.html', {'form': form, 'product': product})
 
-# Editar Review
+# Edit Review
 
 
 @login_required
@@ -54,7 +54,7 @@ def edit_review(request, review_id):
     return render(
         request, 'reviews/edit_review.html', {'form': form, 'review': review})
 
-# Excluir Review
+# Delete Review
 
 
 @login_required

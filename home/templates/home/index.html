@@ -36,8 +36,10 @@
 
 <!-- Testimonials Section -->
 <div class="container mt-5">
+    <a href="{% url 'testimonial_list' %}">
     <h2 class="text-center mb-4">💬 What Our Customers Say</h2>
     <div id="testimonialsCarousel" class="carousel slide" data-ride="carousel">
+    </a>
         <div class="carousel-inner">
             {% for testimonial in testimonials %}
             <div class="carousel-item {% if forloop.first %}active{% endif %}">

@@ -15,7 +15,7 @@ def index(request):
     except Category.DoesNotExist:
         deals_category = None
         hot_deals = []
-        messages.warning(request, "A categoria 'Deals' não foi encontrada.")
+        messages.warning(request, "NO Deals.")
 
     context = {
         'testimonials': testimonials,
