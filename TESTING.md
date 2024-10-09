@@ -81,13 +81,10 @@ Below is a list of bugs and fixes found while creating a feature. You can find o
 ##### Python - PEP8 - using pycodestyle
 [Description of Python validation]
 
-![Checkout admin](https://github.com/dhardi/gameshark/blob/main/static/images/admin_checkout_python.png)
+![Python](https://github.com/dhardi/gameshark/blob/main/python_testing.md)
 
 
-#### Within the Footer
-[Description of footer accessibility issues]
 
-![Footer Accessibility Image](link-to-your-image)
 
 ### Lighthouse Scores
 #### Home Page
