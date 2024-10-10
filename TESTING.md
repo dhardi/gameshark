@@ -276,10 +276,7 @@ Most of this epic were tasks for the development phase; therefore, the testing i
 |&check;| The list of products can be ordered by price ascending and descending.
 |&check;| The list of products can be ordered by rating ascending and descending.
 |&check;| The list of products can be filtered to show only those with an active sale.
-|&check;| The list of products shows stock status, i.e., in stock/out of stock.
 |&check;| Add to cart button works as expected on all products and product details pages.
-|&check;| User cannot add more items to their cart that are in stock.
-|&check;| When an item is out of stock, the add to cart button is disabled.
 
 |passed | **View individual product details** so that I can **identify the price, description, detailed reviews, and product image enabling me to compare how the product differs from other items.**
 |:---:|:---|
@@ -292,10 +289,8 @@ Most of this epic were tasks for the development phase; therefore, the testing i
 |&check;| The product details page shows the product rating.
 |&check;| The product details page shows the product reviews.
 |&check;| The product details page shows the review form if there are no reviews already.
-|&check;| The product details page shows the stock status.
 |&check;| The product details page shows the product quantity selector.
 |&check;| The product details page shows the product add to cart button.
-|&check;| User cannot add more items to the cart than are currently in stock.
 
 |passed | **View the total of my purchases at any time** so that I can **see and review how much I am spending at any time whilst building an order.**
 |:---:|:---|
@@ -324,8 +319,6 @@ Most of this epic were tasks for the development phase; therefore, the testing i
 |&check;| User cannot enter a value less than 1 for the rating field.
 |&check;| User cannot submit a review without a title.
 |&check;| User cannot submit a review without a rating.
-|&check;| Overall rating is calculated and displayed on the product detail page/product card.
-|&check;| Overall rating is adjusted when a review is deleted or edited.
 |&check;| Author of the review can edit their review.
 |&check;| Author of the review can delete their review.
 |&check;| Author of the review can not edit or delete another user's review.
@@ -343,7 +336,7 @@ Most of this epic were tasks for the development phase; therefore, the testing i
 |&check;| Accordion opens and closes when clicked.
 |&check;| Accordion only allows for one review to be expanded simultaneously to save display space.
 |&check;| If there are no reviews, then an inline form is shown in place of the accordion.
-|&check;| If reviews, there is a button above for the user to add a review.
+|&check;| If reviews, there is a button below for the user to add a review.
 
 |passed | **Identify any promotions that are available** so that I can **take advantage of them and obtain the best value for money possible.**
 |:---:|:---|
@@ -371,28 +364,9 @@ Most of this epic were tasks for the development phase; therefore, the testing i
 |&check; | The site has a pleasant promotions page.
 |&check; | Everything is aligned and spaced correctly.
 
-|passed | **Easily contact the store owner** so that I can **ask questions about the products or the site.**
-|:---:|:---|
-|&check;| The site has a contact page.
-|&check;| Contact form cannot be submitted with required fields blank.
-|&check;| Contact form cannot be presented with an invalid email address.
-|&check;| Contact form submits a message to the database.
-|&check;| Message can be read in the admin panel.
-|&check;| Success message is shown to the user when a message is submitted.
-|&check;| Notes can be added to the message in the admin panel.
-|&check;| Message can be updated as done.
-|&check;| pending reply is automatically ticked and can be un-ticked to indicate the message is complete
-|&check;| Message can be deleted.
-|&check;| Messages can be filtered by "marked as done" and "pending reply".
-|&check;| Messages can be filtered by "all," "today," "this week," "this month," and "this year".
 
-|passed | **All site users are of legal age to purchase vape supplies** so that I can **comply with the law.**
-|:---:|:---|
-|&check;| On the site's first visit, the user is asked to confirm they are over 18.
-|&check;| If the user is under 18, they are blocked from viewing the site until they confirm they are of legal age.
-|&check;| Cookie is left upon the user confirming they are of legal age.
-|&check;| Pop-up appears on every page until the user confirms they are of legal age.
-|&check;| Cookie has an expiry date of one day.
+
+
 
 #### **EPIC 3 - Registration and User Accounts:**
 
@@ -509,7 +483,6 @@ Most of this epic were tasks for the development phase; therefore, the testing i
 |&check;| User is shown a success/error message when the state changes in the cart.
 |&check;| User cannot set the quantity selector to more than the in-stock level
 |&check;| User cannot set the quantity selector to less than 1
-|&check;| User can set the quantity selector to the in-stock level.
 |&check;| User can set the quantity selector to 1.
 |&check;| User can use the plus and minus buttons to select the quantity.
 |&check;| User cannot add a quantity of 0 to the cart.
@@ -525,7 +498,6 @@ Most of this epic were tasks for the development phase; therefore, the testing i
 |&check;| The checkout page has a button to save the user's details for future use.
 |&check;| If checked, the details from the checkout form are saved to the user's profile.
 |&check;| If it exists, the users saved details are pre-filled in the checkout form.
-|&check;| If the user has saved details, the checkbox is unchecked by default.
 
 |passed | **View an order confirmation after checkout** so that I can **verify that I haven’t made any mistakes.**
 |:---:|:---|
@@ -548,16 +520,6 @@ Most of this epic were tasks for the development phase; therefore, the testing i
 |&check;| Email includes the delivery cost.
 |&check;| Email has a contact email address for assistance.
 
-|passed | **View my order history** so that I can **see the orders I have made previously.**
-|:---:|:---|
-|&check;| The site has an order history page for registered users.
-|&check;| The order history page lists all the orders made by the user.
-|&check;| The order history page has a link to view the order details.
-|&check;| The order history page has a link to return to their profile page.
-|&check;| The order history page can only be accessed by the user who made the order.
-|&check;| Unregistered users cannot access their previous order confirmation.
-|&check;| Appropriate error message is shown if a user tries to access an order confirmation that is not theirs.
-|&check;| Appropriate error message is displayed if an unregistered user tries to get back to their order confirmation using a URL.
 
 |passed | **Access the checkout page** so that I can **review my order whilst entering my payment/shipping details**
 |:---:|:---|
@@ -598,41 +560,12 @@ Most of this epic were tasks for the development phase; therefore, the testing i
 |passed | **Add a promotion** so that I can **add new promotions to the store.**
 |:---:|:---|
 |&check;| Promotion can be added via the admin panel and is visible in the store front end.
-|&check;| Start sale function in the admin panel set has sale to true.
-|&check;| Remove sale function in the admin panel set has sale to false.
-|&check;| 10% discount function reduces the discounted price to 10% less.
-|&check;| 20% discount function reduces the discounted price to 20% less.
-|&check;| 30% discount function reduces the discounted price to 30% less.
-|&check;| 40% discount function reduces the discounted price to 40% less.
-|&check;| 50% discount function reduces the discounted price to 50% less.
-|&check;| Price comes from the discounted price when has sale is True.
-|&check;| Price comes from RRP when has sale is false.
-|&check;| Sale actions taken in the back end are visible on the front end via product cards and details pages.
 
-|passed | **manually manage the stock levels** so that I can **input received purchase orders and ensure that the stock levels are accurate in case of discrepancies or damages.**
-|:---:|:---|
-|&check;| Stock levels can be manually adjusted via the admin panel.
-|&check;| Stock levels can be manually adjusted via the front end.
-|&check;| Stock levels are deducted upon successful purchase.
-|&check;| Item set to out of stock if stock level is 0.
-|&check;| If an order is deleted, the store is returned to the system.
-|&check;| If an order is amended from the admin panel, the stock is also adjusted accordingly.
-|&check;| Order cannot be amended to have more products than are in stock.
+
 
 #### **EPIC 7 - Product Reviews:**
 
-|passed | **Leave a review** so that I can **share my opinion of a product and leave a rating.**
-|:---:|:---|
-|&check;| The site has a review form.
-|&check;| When there are no reviews for a product, the review form is displayed on the product details page.
-|&check;| When there are reviews, they are displayed in an accordion with all relevant details visible.
-|&check;| When there are reviews, the is a button to add a review.
-|&check;| The leave review button takes the user to the review form page with the correct product name in the title and image displayed.
-|&check;| The review form has a field to enter the review title, rating, and text.
-|&check;| The review form has a button to submit the review.
-|&check;| Rating cannot be above five or below one.
-|&check;| Rating is a number field.
-|&check;| Overall rating is re-calculated when a review is added.
+
 
 |passed | **View reviews of a product** so that I can **see what other people think of a product.**
 |:---:|:---|
@@ -654,7 +587,7 @@ Most of this epic were tasks for the development phase; therefore, the testing i
 |&check;| Review cannot be deleted by a user who did not create the review (unless superuser) even by using the URL.
 |&check;| A superuser can delete all reviews.
 |&check;| All reviews can be deleted by the user who created the review.
-|&check;| Overall rating is re-calculated when a review is deleted.
+
 
 #### **EPIC 8 - Marketing:**
 
