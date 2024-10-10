@@ -89,59 +89,74 @@ Below is a list of bugs and fixes found while creating a feature. You can find o
 ### Lighthouse Scores
 #### Home Page
 **Desktop**
-![Desktop Lighthouse Score](link-to-your-image)
+![Desktop Lighthouse Score](https://github.com/dhardi/gameshark/blob/main/static/images/home_lighthouse.png)
 
 **Mobile**
-![Mobile Lighthouse Score](link-to-your-image)
+![Mobile Lighthouse Score](https://github.com/dhardi/gameshark/blob/main/static/images/home_mobile_lighthouse.png)
 
 #### Products Page
 **Desktop**
-![Desktop Lighthouse Score](link-to-your-image)
+![Desktop Lighthouse Score](https://github.com/dhardi/gameshark/blob/main/static/images/products_lighthouse.png)
 
 **Mobile**
-![Mobile Lighthouse Score](link-to-your-image)
+![Mobile Lighthouse Score](https://github.com/dhardi/gameshark/blob/main/static/images/produtcs_mobile_lighthouse.png)
 
 #### Product Details Page
 **Desktop**
-![Desktop Lighthouse Score](link-to-your-image)
+![Desktop Lighthouse Score](https://github.com/dhardi/gameshark/blob/main/static/images/product_detail_lighthouse.png)
 
 **Mobile**
-![Mobile Lighthouse Score](link-to-your-image)
+![Mobile Lighthouse Score](https://github.com/dhardi/gameshark/blob/main/static/images/produtcs_mobile_lighthouse.png)
 
-#### Contact Us Page
+#### Review
 **Desktop**
-![Desktop Lighthouse Score](link-to-your-image)
+![Desktop Lighthouse Score](https://github.com/dhardi/gameshark/blob/main/static/images/review_lighthouse.png)
 
 **Mobile**
-![Mobile Lighthouse Score](link-to-your-image)
+![Mobile Lighthouse Score](https://github.com/dhardi/gameshark/blob/main/static/images/review_mobile_lighthouse.png)
 
 #### Shopping Cart Page
 **Desktop**
-![Desktop Lighthouse Score](link-to-your-image)
+![Desktop Lighthouse Score](https://github.com/dhardi/gameshark/blob/main/static/images/bag_lighthouse.png)
 
 **Mobile**
-![Mobile Lighthouse Score](link-to-your-image)
+![Mobile Lighthouse Score](https://github.com/dhardi/gameshark/blob/main/static/images/bag_mobile_lighthouse.png)
 
 #### Checkout Page
 **Desktop**
-![Desktop Lighthouse Score](link-to-your-image)
+![Desktop Lighthouse Score](https://github.com/dhardi/gameshark/blob/main/static/images/checkout_lighthouse.png)
 
 **Mobile**
-![Mobile Lighthouse Score](link-to-your-image)
+![Mobile Lighthouse Score](https://github.com/dhardi/gameshark/blob/main/static/images/checkout_mobile_lighthouse.png)
 
 #### Profile Page
 **Desktop**
-![Desktop Lighthouse Score](link-to-your-image)
+![Desktop Lighthouse Score](https://github.com/dhardi/gameshark/blob/main/static/images/profile_lighthouse.png)
 
 **Mobile**
-![Mobile Lighthouse Score](link-to-your-image)
+![Mobile Lighthouse Score](https://github.com/dhardi/gameshark/blob/main/static/images/profile_mobile_lighthouse.png)
 
 #### Checkout Success/Order History Page
 **Desktop**
-![Desktop Lighthouse Score](link-to-your-image)
+![Desktop Lighthouse Score](https://github.com/dhardi/gameshark/blob/main/static/images/checkout_lighthouse.png)
 
 **Mobile**
-![Mobile Lighthouse Score](link-to-your-image)
+![Mobile Lighthouse Score](https://github.com/dhardi/gameshark/blob/main/static/images/checkout_mobile_lighthouse.png)
+
+
+#### Wishlist
+**Desktop**
+![Desktop Lighthouse Score](https://github.com/dhardi/gameshark/blob/main/static/images/wishlist_lighthouse.png)
+
+**Mobile**
+![Mobile Lighthouse Score](https://github.com/dhardi/gameshark/blob/main/static/images/wishlist_mobile_lighthouse.png)
+
+#### Testimonial
+**Desktop**
+![Desktop Lighthouse Score](https://github.com/dhardi/gameshark/blob/main/static/images/testimonnial_lighthouse.png)
+
+**Mobile**
+![Mobile Lighthouse Score](https://github.com/dhardi/gameshark/blob/main/static/images/testimonial_mobile_lighthouse.png)
 
 ### Reviewing the Lighthouse Scores
 [Description of Lighthouse scores analysis]
