@@ -43,7 +43,7 @@
 ##### Python - PEP8 - using pycodestyle
 [Description of Python validation]
 
-![Python](https://github.com/dhardi/gameshark/blob/main/python_testing.md)
+- [Testing](https://github.com/dhardi/gameshark/blob/main/python_testing.md)
 
 
 

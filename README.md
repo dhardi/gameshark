@@ -1,6 +1,9 @@
 # Gameshark E-Commerce Platform
 
-![Gameshark Logo](link-to-your-image.png)
+![Gameshark Logo](https://github.com/dhardi/gameshark/blob/main/static/images/responnsive.png)
+
+
+- [Live site](https://gameshark-4e405cfc132a.herokuapp.com/)
 
 ## Design and Planning
 
@@ -28,49 +31,113 @@ The primary goals of the Gameshark project are as follows:
 3. **Implement Robust Security**: Use secure authentication methods and data protection measures to safeguard user information.
 4. **Enhance Product Visibility**: Utilize effective product categorization and search functionality to improve the discoverability of products.
 
-## Conclusion
-
-Gameshark is dedicated to creating a vibrant online shopping environment for gaming enthusiasts. By continually improving features and incorporating user feedback, we aim to enhance the overall experience for all users.
-
-
-
-
 ## User Stories
-### Epics and Must-Have Features
-- **Easily Register for an account**
-- **Easily login or logout**
-- **Quickly identify deals, clearance items, and special offers**
-- **View individual product details**
-- **View a specific category of products**
-- **Add a product to the shopping cart**
-- **Delete a product from the shopping cart**
-- **Adjust the quantity of items in the cart**
-- **View items in the cart before purchase**
-- **Edit/update product information**
-- **Search for a product by name or description**
-- **Sort multiple categories or products simultaneously**
-- **Receive an email confirmation after checkout**
-- **Have a personalized user profile**
-- **Feel my personal and payment information is secure**
+# Epic Reviews
+
+## Delete Review
+- **#33** by dhardi was closed 2 weeks ago
+
+## Edit Review Product
+- **#32** by dhardi was closed 2 weeks ago
+
+## Review App
+- **#31** by dhardi was closed 2 weeks ago
+
+## Testimonial Edit
+- **#30** by dhardi was closed 2 weeks ago
+
+## Testimonial
+- Easily recover my password if lost
+  - **#8** by dhardi was closed 2 weeks ago
+
+## Easily Login or Logout
+- **#7** by dhardi was closed on Sep 1
+
+## Easily Register for an Account
+- **#6** by dhardi was closed on Aug 25
+
+## Easily View the Total of My Purchases at Any Time
+- **#5** by dhardi was closed on Sep 4
+
+## Quickly Identify Deals, Clearance Items, and Special Offers
+- **#4** by dhardi was closed on Sep 4
+
+## View Individual Product Details
+- **#3** by dhardi was closed on Sep 1
+
+## View a Specific Category of Products
+- **#2** by dhardi was closed on Sep 1
+
+## View a List of Products
+- **#1** by dhardi was closed on Sep 1
+
+- **#29** by dhardi was closed 2 weeks ago
+
+## Buy it from Wishlist
+- **#28** by dhardi was closed 2 weeks ago
+
+## Remove from Wishlist
+- **#27** by dhardi was closed 2 weeks ago
+
+## Wishlist
+- **#26** by dhardi was closed 2 weeks ago
+
+## Delete a Product
+- **#25** by dhardi was closed on Sep 1
+
+## Edit/Update a Product
+- **#24** by dhardi was closed on Sep 1
+
+## Add a Product
+- **#23** by dhardi was closed on Sep 1
+
+## Receive an Email Confirmation After Checkout
+- **#22** by dhardi was closed 3 weeks ago
+
+## View an Order Confirmation After Checkout
+- **#21** by dhardi was closed 3 weeks ago
+
+## Feel My Personal and Payment Information is Secure
+- **#20** by dhardi was closed 3 weeks ago
+
+## Easily Enter My Payment Information
+- **#19** by dhardi was closed on Sep 4
+
+## Adjust the Quantity of Items in My Bag
+- **#18** by dhardi was closed on Sep 1
+
+## View Items in My Bag to Be Purchased
+- **#17** by dhardi was closed on Sep 1
+
+## Easily Select the Quantity of a Product
+- **#16** by dhardi was closed on Sep 1
+
+## Easily See What I've Searched for and the Number of Results
+- **#15** by dhardi was closed 2 weeks ago
+
+## Search for a Product by Name or Description
+- **#14** by dhardi was closed on Sep 1
+
+## Sort Multiple Categories or Products Simultaneously
+- **#13** by dhardi was closed on Sep 1
+
+## Sort a Specific Category of Products
+- **#12** by dhardi was closed on Sep 1
+
+## Sort the List of Available Products
+- **#11** by dhardi was closed on Sep 1
+
+## Have a Personalized User Profile
+- **#10** by dhardi was closed 2 weeks ago
+
+## Receive an Email Confirmation After Registering
+- **#9** by dhardi was closed 2 weeks ago
+
+### Conclusion
+
+Compiling all the user stories was a challenging yet ultimately rewarding endeavor. This process demanded meticulous attention to detail as I aimed to accurately capture each user’s unique needs and experiences. Balancing the varying priorities of stakeholders proved particularly difficult, with different users often presenting conflicting requirements that complicated the search for common ground. Additionally, ensuring that each story was not only clear and concise but also aligned with the overall product vision required significant effort and focus. Effective time management became critical as I navigated multiple iterations, gathered feedback, and made necessary revisions. Ultimately, these challenges enriched my understanding of user needs and contributed to creating a more comprehensive and user-centered product roadmap.
 
 
-
-## Bugs and Fixes
-### Identified Bugs
-- **Issue:** Users unable to add testimonials without being logged in.
-  - **Fix:** Implemented a login requirement for submitting testimonials.
-  
-- **Issue:** SMTP authentication error when registering new users.
-  - **Fix:** Configured SMTP settings correctly in settings.py.
-
-## Challenges Faced
-- **User Authentication:** Setting up user authentication was initially complex, particularly in ensuring users could only access their own reviews and wishlists.
-- **Email Functionality:** Configuring email functionalities for user confirmations required attention to detail to prevent authentication errors.
-- **Database Relationships:** Establishing correct foreign key relationships between products and reviews presented some challenges in maintaining data integrity.
-
-## Future Features
-- Implement a recommendation system based on user behavior.
-- Create user roles with different permission levels (admin, seller, buyer).
 
 
 # Entity-Relationship Diagram (ERD) for E-Commerce Website
@@ -194,7 +261,7 @@ This **Entity-Relationship Diagram (ERD)** represents the structure of the e-com
 
 ## Testimonial
 ![Testimonial](https://github.com/dhardi/gameshark/blob/main/static/images/testimonial_wireframes.png)
-*Description:* Section for displaying user testimonials and feedback about the e-commerce platform.
+*Description:* Section for displaying user testimonials and feedback about the e-commerce platform one testimonial per order.
 
 
 # Features Overview
@@ -320,17 +387,68 @@ This document provides a step-by-step guide for deploying your project. All depl
 
 This document provides Marketing ideas and planning 
 
-- [Marketing](https://github.com/dhardi/gameshark/blob/main/markting.md)S
+- [Marketing](https://github.com/dhardi/gameshark/blob/main/markting.md)
 
 # Testing
 
 all the testing you can find here
 
-- [Python](https://github.com/dhardi/gameshark/blob/main/TESTING.md)
+- [Testing](https://github.com/dhardi/gameshark/blob/main/TESTING.md)
 
 
 
+## **Technologies used**
+
+
+* Django
+  * Django was used as the python framework in the project.
+  * Django all auth was used to handle user authentication and related tasks i.e. sign in, sign up, sign out.
+* Heroku
+  * Used to deploy the page and make it publicly available.
+* Heroku PostgreSQL & ElephantSQL
+  * Used for the database during deployment.
+* SQLlite3
+	* Was used during development as a database to test models.
+* HTML
+  * HTML was the base language used to lay out the skeleton of all templates.
+* CSS
+  * Custom CSS is used to style the page .
+* Javascript
+  * I have used Javascript to manipulate the DOM and communicate with the backend to create, read, update, and delete data from the database.
+* Bootstrap 
+  * Used to style HTML, CSS,  javascript. 
+* Font awesome
+  * All icons throughout the page.
+* AWS S3
+  * Used to store static and media files.
+* Stripe
+  * Used to handle payments.
 
 
 
+## **Honorable Mentions**
 
+* [Richard Wells](https://github.com/D0nni387) - Mentor extraordinaire. He was ways on call when I needed him and never afraid to pull out the big guns to push that little bit further.
+* [Sean Murphy](https://github.com/nazarja) - Just a legend, any way you slice it, he helped me understand the logic behind my pin job feature by providing examples of similar things and helped me to connect to Heroku through the console of VScode
+* [Matt Bodden](https://github.com/MattBCoding) - The comfort of a friend no matter the time of day, the push of a competitor even if I was not playing the game.
+* [Steve Wier](https://github.com/StevenWeir038) - A man and a legend in his own right. He continuously checked in on me, tested my work, and pushed me to move forward even when I did not feel like it.
+* Ed_CI - was always there in the project channel and quick to jump in to help.
+* The code institute Slack community, who tested and supported me throughout. There have been too many to mention everyone who encouraged along the way, but they are all superstars.
+* An enormous thanks goes to my son, Oliver, who has been my reason for the change and was great for forcing me to take regular play breaks.
+
+## **Credits**
+
+* [Code Institute](https://codeinstitute.net/) 
+* Balsamiq was used to create the wireframes.
+* The site was developed using Gitpod.
+* GitHub was used to store my repository.
+* [W3cschool](https://www.w3schools.com) used to remeber the syntax of various languages.
+* [Stackoverflow](https://stackoverflow.com/) for debugging and finding solutions to problems.
+* Fonts were taken from [Google Fonts](https://fonts.google.com/)
+* [favicon generator](https://www.favicon-generator.org/) was used to generate the favicon.
+* [Diagram](https://www.eraser.io/diagramgpt) was used to create the database diagram.
+
+### **Media**  
+  * [Hero](https://www.pinterest.com/pin/448178600399282300/) 
+* Products images and descriptions were taken from the following sites
+  * [Amazon](https://www.amazon.co.uk/)
