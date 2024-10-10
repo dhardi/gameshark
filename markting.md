@@ -1,5 +1,8 @@
 # Marketing Types Challenge: GameShark E-commerce
 
+![Gameshark Facebook](https://github.com/dhardi/gameshark/blob/main/static/images/facebookpage.png)
+
+
 **Business Idea**: GameShark is an e-commerce platform that sells video games, gaming accessories, and merchandise, with a focus on providing a high-quality shopping experience for gamers.
 
 ---
