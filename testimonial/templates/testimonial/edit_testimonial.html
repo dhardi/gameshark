@@ -3,11 +3,55 @@
 
 {% block content %}
 <div class="container mt-5">
-    <h2>Edit Your Testimonial</h2>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="btn btn-primary">Save Changes</button>
-    </form>
+    <div class="card shadow-sm">
+        <div class="card-header bg-primary text-white">
+            <h2>Edit Your Testimonial</h2>
+        </div>
+        <div class="card-body">
+            <form method="post" id="testimonialForm">
+                {% csrf_token %}
+                {{ form.as_p }}
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-success" id="submitBtn">Save Changes</button>
+                    <a href="{% url 'testimonial_list' %}" class="btn btn-secondary ml-2">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
+
+
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+// Frontend validation and user feedback
+
+document.getElementById('testimonialForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission until validation
+    
+    const form = event.target;
+    const submitBtn = document.getElementById('submitBtn');
+    submitBtn.disabled = true; // Disable button to prevent multiple submissions
+
+    // Simulated validation (you can add custom validation here)
+    if (!form.checkValidity()) {
+        displayToast('error');
+        submitBtn.disabled = false;
+        return;
+    }
+    
+    // Simulating a success message
+    displayToast('success');
+    form.submit(); // Submit the form if validation is successful
+});
+
+function displayToast(type) {
+    const toastElement = type === 'success' ? document.getElementById('toastSuccess') : document.getElementById('toastError');
+    const toast = new bootstrap.Toast(toastElement);
+    toast.show();
+}
+</script>
 {% endblock %}
