@@ -148,106 +148,107 @@ While these errors indicate areas for improvement in the HTML structure, they do
 
 
 ## User Stories
-# Epic Reviews
+### Epic Reviews
 
-## Delete Review
+#### Delete Review
 - **#33** by dhardi was closed 2 weeks ago
 
-## Edit Review Product
+#### Edit Review Product
 - **#32** by dhardi was closed 2 weeks ago
 
-## Review App
+#### Review App
 - **#31** by dhardi was closed 2 weeks ago
 
-## Testimonial Edit
+#### Testimonial Edit
 - **#30** by dhardi was closed 2 weeks ago
 
-## Testimonial
+#### Testimonial
 - Easily recover my password if lost
   - **#8** by dhardi was closed 2 weeks ago
 
-## Easily Login or Logout
+#### Easily Login or Logout
 - **#7** by dhardi was closed on Sep 1
 
-## Easily Register for an Account
+#### Easily Register for an Account
 - **#6** by dhardi was closed on Aug 25
 
-## Easily View the Total of My Purchases at Any Time
+#### Easily View the Total of My Purchases at Any Time
 - **#5** by dhardi was closed on Sep 4
 
-## Quickly Identify Deals, Clearance Items, and Special Offers
+#### Quickly Identify Deals, Clearance Items, and Special Offers
 - **#4** by dhardi was closed on Sep 4
 
-## View Individual Product Details
+#### View Individual Product Details
 - **#3** by dhardi was closed on Sep 1
 
-## View a Specific Category of Products
+#### View a Specific Category of Products
 - **#2** by dhardi was closed on Sep 1
 
-## View a List of Products
+#### View a List of Products
 - **#1** by dhardi was closed on Sep 1
 
+#### Additional Reviews
 - **#29** by dhardi was closed 2 weeks ago
 
-## Buy it from Wishlist
+#### Buy it from Wishlist
 - **#28** by dhardi was closed 2 weeks ago
 
-## Remove from Wishlist
+#### Remove from Wishlist
 - **#27** by dhardi was closed 2 weeks ago
 
-## Wishlist
+#### Wishlist
 - **#26** by dhardi was closed 2 weeks ago
 
-## Delete a Product
+#### Delete a Product
 - **#25** by dhardi was closed on Sep 1
 
-## Edit/Update a Product
+#### Edit/Update a Product
 - **#24** by dhardi was closed on Sep 1
 
-## Add a Product
+#### Add a Product
 - **#23** by dhardi was closed on Sep 1
 
-## Receive an Email Confirmation After Checkout
-- **#22** by dhardi was closed 3 weeks ago
+#### Order Confirmation
+- Receive an Email Confirmation After Checkout
+  - **#22** by dhardi was closed 3 weeks ago
+- View an Order Confirmation After Checkout
+  - **#21** by dhardi was closed 3 weeks ago
 
-## View an Order Confirmation After Checkout
-- **#21** by dhardi was closed 3 weeks ago
+#### Payment Security
+- Feel My Personal and Payment Information is Secure
+  - **#20** by dhardi was closed 3 weeks ago
+- Easily Enter My Payment Information
+  - **#19** by dhardi was closed on Sep 4
 
-## Feel My Personal and Payment Information is Secure
-- **#20** by dhardi was closed 3 weeks ago
+#### Shopping Cart
+- Adjust the Quantity of Items in My Bag
+  - **#18** by dhardi was closed on Sep 1
+- View Items in My Bag to Be Purchased
+  - **#17** by dhardi was closed on Sep 1
+- Easily Select the Quantity of a Product
+  - **#16** by dhardi was closed on Sep 1
 
-## Easily Enter My Payment Information
-- **#19** by dhardi was closed on Sep 4
+#### Search Functionality
+- Easily See What I've Searched for and the Number of Results
+  - **#15** by dhardi was closed 2 weeks ago
+- Search for a Product by Name or Description
+  - **#14** by dhardi was closed on Sep 1
 
-## Adjust the Quantity of Items in My Bag
-- **#18** by dhardi was closed on Sep 1
+#### Sorting Products
+- Sort Multiple Categories or Products Simultaneously
+  - **#13** by dhardi was closed on Sep 1
+- Sort a Specific Category of Products
+  - **#12** by dhardi was closed on Sep 1
+- Sort the List of Available Products
+  - **#11** by dhardi was closed on Sep 1
 
-## View Items in My Bag to Be Purchased
-- **#17** by dhardi was closed on Sep 1
+#### User Profile
+- Have a Personalized User Profile
+  - **#10** by dhardi was closed 2 weeks ago
 
-## Easily Select the Quantity of a Product
-- **#16** by dhardi was closed on Sep 1
-
-## Easily See What I've Searched for and the Number of Results
-- **#15** by dhardi was closed 2 weeks ago
-
-## Search for a Product by Name or Description
-- **#14** by dhardi was closed on Sep 1
-
-## Sort Multiple Categories or Products Simultaneously
-- **#13** by dhardi was closed on Sep 1
-
-## Sort a Specific Category of Products
-- **#12** by dhardi was closed on Sep 1
-
-## Sort the List of Available Products
-- **#11** by dhardi was closed on Sep 1
-
-## Have a Personalized User Profile
-- **#10** by dhardi was closed 2 weeks ago
-
-## Receive an Email Confirmation After Registering
-- **#9** by dhardi was closed 2 weeks ago
+#### Registration Confirmation
+- Receive an Email Confirmation After Registering
+  - **#9** by dhardi was closed 2 weeks ago
 
 ### Conclusion
 
