@@ -18,15 +18,21 @@
 - Implement a recommendation system based on user behavior.
 - Create user roles with different permission levels (admin, seller, buyer).
 
-![Image Description Here](link-to-your-image)
+
 
 ### Testing (Post Development Phase)
 #### Validation
 
 ##### HTML
-[Description of HTML validation]
+## Impact on Functionality
 
-![HTML Validation Image](link-to-your-image)
+Despite the presence of these errors, it is important to note that they do not hinder the overall functionality of the website. The site continues to operate as intended, allowing users to navigate and access its features without issues. 
+
+### Conclusion
+
+While these errors indicate areas for improvement in the HTML structure, they do not affect the site's performance or user experience. Addressing these issues will enhance code quality and maintainability, ensuring compliance with web standards.
+
+![HTML Validation Image](https://github.com/dhardi/gameshark/blob/main/static/images/html.png)
 
 ##### CSS
 [Description of CSS validation]
