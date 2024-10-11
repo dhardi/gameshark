@@ -57,9 +57,9 @@ The below works on the assumption that you already have an account with [Heroku]
 1. Create a new Heroku app:
     * Click "New" in the top right-hand corner of the landing page, then click "Create new app."
 1. Give the app a unique name:
-    * Will form part of the URL (in the case of this project, I called the Heroku app jobs-a-gooden)
+    * Will form part of the URL (in the case of this project, I called the Heroku app Gameshark)
 1. Select the nearest location:
-    * For me, this was Europe.
+    * For me, eu-north-1.
 1. Add Database to the Heroku app:
     * Navigate to the Resources tab of the app dashboard. Under the heading "Add ons," search for "Heroku Postgres" and click on it when it appears.
     * Select "Hobby Dev - Free" from the "plan name" drop-down menu and click "Submit Order Form."
@@ -77,7 +77,7 @@ The below works on the assumption that you already have an account with [AWS](ht
     * Give the bucket a unique name:
         * Will form part of the URL (in the case of this project, I called the S3 bucket pp5-gameshark)
     * Select the nearest location:
-        * For me, this was EU (Frankfurt) eu-central-1.
+        * For me,  eu-north-1.
     * Under the "Object Ownership" section, select "ACLS enabled"
     * Under the "Block Public Access settings for this bucket" section, untick "Block all public access" and tick the box to acknowledge that this will make the bucket public.
     * Click "Create bucket."
