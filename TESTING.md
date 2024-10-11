@@ -62,10 +62,12 @@ While these errors indicate areas for improvement in the HTML structure, they do
 
 ![Country](https://github.com/dhardi/gameshark/blob/main/static/images/coutry_java.png)
 
-##### Python - PEP8 - using pycodestyle
-[Description of Python validation]
+##### Python - PEP8 Standards using `pycodestyle`
+[Adherence to Python's PEP8 coding standards by using the `pycodestyle` tool for validation. You can find screenshots of the tests in the link below.]
 
-- [Testing](https://github.com/dhardi/gameshark/blob/main/python_testing.md)
+- [Detailed Python Testing and Validation](https://github.com/dhardi/gameshark/blob/main/python_testing.md)
+
+
 
 
 

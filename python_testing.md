@@ -1,4 +1,4 @@
-# GameShark Project Images
+# Python testing
 
 ## Admin Panel Screenshots
 - ![Checkout Admin](https://github.com/dhardi/gameshark/blob/main/static/images/admin_checkout_python.png)
