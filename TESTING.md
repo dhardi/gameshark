@@ -1,18 +1,34 @@
 
 # Testing
 
-## Bugs and Fixes
-### Identified Bugs
-- **Issue:** Users unable to add testimonials without being logged in.
-  - **Fix:** Implemented a login requirement for submitting testimonials.
-  
-- **Issue:** SMTP authentication error when registering new users.
-  - **Fix:** Configured SMTP settings correctly in settings.py.
+## Bug and Fix
 
 ## Challenges Faced
-- **User Authentication:** Setting up user authentication was initially complex, particularly in ensuring users could only access their own reviews and wishlists.
-- **Email Functionality:** Configuring email functionalities for user confirmations required attention to detail to prevent authentication errors.
-- **Database Relationships:** Establishing correct foreign key relationships between products and reviews presented some challenges in maintaining data integrity.
+
+### 1. User Authentication
+- **Challenge:** Setting up user authentication was initially difficult, especially ensuring users could only edit their own profile, wishlist, and testimonials.
+- **Solution:** Implemented Django's authentication system along with custom decorators to restrict user access to specific pages based on their login status.
+
+### 2. Email Functionality
+- **Challenge:** Configuring email functionality for user registration and password recovery was challenging, especially when setting up SMTP servers.
+- **Solution:** Correctly configured the SMTP settings in `settings.py`, ensuring proper error handling for common authentication errors.
+
+### 3. Image Uploads
+- **Challenge:** Ensuring that profile pictures and product images uploaded properly and displayed correctly across different sections.
+- **Solution:** Added media configurations, handled image file storage paths, and applied checks for missing images to improve user experience.
+
+### 4. Database Relationships
+- **Challenge:** Managing relationships between products, categories, reviews, and users posed issues when setting up foreign keys.
+- **Solution:** Corrected the database models to establish proper foreign key and many-to-many relationships, especially between products, categories, and user profiles.
+
+### 5. Template Rendering Issues
+- **Challenge:** The Django template sometimes failed to render context variables correctly, leading to issues with the display of dynamic content.
+- **Solution:** Carefully debugged the template context in views, ensuring that the data passed to the templates was accurate and properly handled.
+
+## Lessons Learned
+- Thoroughly test template variables and context data to ensure smooth page rendering.
+- Pay attention to database relationships and how they impact views and templates.
+- Ensure that media files (such as profile images) are properly configured in Django's settings and handled carefully in templates.
 
 ## Future Features
 - Implement a recommendation system based on user behavior.
@@ -148,107 +164,96 @@ While these errors indicate areas for improvement in the HTML structure, they do
 
 
 ## User Stories
-### Epic Reviews
 
-#### Delete Review
-- **#33** by dhardi was closed 2 weeks ago
+### Epic: Reviews
+- **Delete Review**
+  - **#33** by dhardi
+- **Edit Review Product**
+  - **#32** by dhardi
+- **Review App**
+  - **#31** by dhardi
+- **Testimonial Edit**
+  - **#30** by dhardi
+- **Additional Reviews**
+  - **#29** by dhardi
 
-#### Edit Review Product
-- **#32** by dhardi was closed 2 weeks ago
+### Epic: Wishlist
+- **Buy it from Wishlist**
+  - **#28** by dhardi
+- **Remove from Wishlist**
+  - **#27** by dhardi
+- **Wishlist Functionality**
+  - **#26** by dhardi
 
-#### Review App
-- **#31** by dhardi was closed 2 weeks ago
+### Epic: Products Management
+- **Delete a Product**
+  - **#25** by dhardi
+- **Edit/Update a Product**
+  - **#24** by dhardi
+- **Add a Product**
+  - **#23** by dhardi
 
-#### Testimonial Edit
-- **#30** by dhardi was closed 2 weeks ago
+### Epic: Order Confirmation
+- **Receive an Email Confirmation After Checkout**
+  - **#22** by dhardi
+- **View an Order Confirmation After Checkout**
+  - **#21** by dhardi
 
-#### Testimonial
-- Easily recover my password if lost
-  - **#8** by dhardi was closed 2 weeks ago
+### Epic: Payment Security
+- **Feel My Personal and Payment Information is Secure**
+  - **#20** by dhardi
+- **Easily Enter My Payment Information**
+  - **#19** by dhardi
 
-#### Easily Login or Logout
-- **#7** by dhardi was closed on Sep 1
+### Epic: Shopping Cart
+- **Adjust the Quantity of Items in My Bag**
+  - **#18** by dhardi
+- **View Items in My Bag to Be Purchased**
+  - **#17** by dhardi
+- **Easily Select the Quantity of a Product**
+  - **#16** by dhardi
 
-#### Easily Register for an Account
-- **#6** by dhardi was closed on Aug 25
-
-#### Easily View the Total of My Purchases at Any Time
-- **#5** by dhardi was closed on Sep 4
-
-#### Quickly Identify Deals, Clearance Items, and Special Offers
-- **#4** by dhardi was closed on Sep 4
-
-#### View Individual Product Details
-- **#3** by dhardi was closed on Sep 1
-
-#### View a Specific Category of Products
-- **#2** by dhardi was closed on Sep 1
-
-#### View a List of Products
-- **#1** by dhardi was closed on Sep 1
-
-#### Additional Reviews
-- **#29** by dhardi was closed 2 weeks ago
-
-#### Buy it from Wishlist
-- **#28** by dhardi was closed 2 weeks ago
-
-#### Remove from Wishlist
-- **#27** by dhardi was closed 2 weeks ago
-
-#### Wishlist
-- **#26** by dhardi was closed 2 weeks ago
-
-#### Delete a Product
-- **#25** by dhardi was closed on Sep 1
-
-#### Edit/Update a Product
-- **#24** by dhardi was closed on Sep 1
-
-#### Add a Product
-- **#23** by dhardi was closed on Sep 1
-
-#### Order Confirmation
-- Receive an Email Confirmation After Checkout
-  - **#22** by dhardi was closed 3 weeks ago
-- View an Order Confirmation After Checkout
-  - **#21** by dhardi was closed 3 weeks ago
-
-#### Payment Security
-- Feel My Personal and Payment Information is Secure
-  - **#20** by dhardi was closed 3 weeks ago
-- Easily Enter My Payment Information
-  - **#19** by dhardi was closed on Sep 4
-
-#### Shopping Cart
-- Adjust the Quantity of Items in My Bag
-  - **#18** by dhardi was closed on Sep 1
-- View Items in My Bag to Be Purchased
-  - **#17** by dhardi was closed on Sep 1
-- Easily Select the Quantity of a Product
-  - **#16** by dhardi was closed on Sep 1
-
+### Epic: Search and Sorting
 #### Search Functionality
-- Easily See What I've Searched for and the Number of Results
-  - **#15** by dhardi was closed 2 weeks ago
-- Search for a Product by Name or Description
-  - **#14** by dhardi was closed on Sep 1
+- **Easily See What I've Searched for and the Number of Results**
+  - **#15** by dhardi
+- **Search for a Product by Name or Description**
+  - **#14** by dhardi
 
 #### Sorting Products
-- Sort Multiple Categories or Products Simultaneously
-  - **#13** by dhardi was closed on Sep 1
-- Sort a Specific Category of Products
-  - **#12** by dhardi was closed on Sep 1
-- Sort the List of Available Products
-  - **#11** by dhardi was closed on Sep 1
+- **Sort Multiple Categories or Products Simultaneously**
+  - **#13** by dhardi
+- **Sort a Specific Category of Products**
+  - **#12** by dhardi
+- **Sort the List of Available Products**
+  - **#11** by dhardi
 
-#### User Profile
-- Have a Personalized User Profile
-  - **#10** by dhardi was closed 2 weeks ago
+### Epic: User Profile
+- **Have a Personalized User Profile**
+  - **#10** by dhardi
 
-#### Registration Confirmation
-- Receive an Email Confirmation After Registering
-  - **#9** by dhardi was closed 2 weeks ago
+### Epic: Registration and Login
+- **Receive an Email Confirmation After Registering**
+  - **#9** by dhardi
+- **Easily Recover My Password If Lost**
+  - **#8** by dhardi
+- **Easily Login or Logout**
+  - **#7** by dhardi
+- **Easily Register for an Account**
+  - **#6** by dhardi
+
+### Epic: Product Browsing
+- **Easily View the Total of My Purchases at Any Time**
+  - **#5** by dhardi
+- **Quickly Identify Deals, Clearance Items, and Special Offers**
+  - **#4** by dhardi
+- **View Individual Product Details**
+  - **#3** by dhardi
+- **View a Specific Category of Products**
+  - **#2** by dhardi
+- **View a List of Products**
+  - **#1** by dhardi
+
 
 ### Conclusion
 

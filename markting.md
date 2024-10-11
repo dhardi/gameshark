@@ -5,6 +5,10 @@
 
 **Business Idea**: GameShark is an e-commerce platform that sells video games, gaming accessories, and merchandise, with a focus on providing a high-quality shopping experience for gamers.
 
+## About the Business
+
+GameShark is a B2C e-commerce platform specializing in the sale of video games, gaming accessories, and collectible merchandise. Focused on providing a high-quality shopping experience, GameShark primarily serves gamers aged 18-35, as well as parents purchasing for their children. The store aims to connect with its user community through social media platforms, influencer marketing, and a strategic SEO approach, with the goal of increasing brand awareness, driving online sales, and fostering a loyal customer base.
+
 ---
 
 ## 1. Who are your users?
