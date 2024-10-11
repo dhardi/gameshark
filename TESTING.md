@@ -353,7 +353,6 @@ Most of this epic were tasks for the development phase; therefore, the testing i
 |passed | **See clearly when something goes wrong on the site** so that I can **correct any errors and continue with my purchase.**
 |:---:|:---|
 |&check;| The site has a 404 page active when the URL is unknown.
-|&check;| The site has a 500-page active when server error.
 |&check;| Relevant feedback is displayed as a toast message when the user cannot act.
 
 |passed | * ... **See a pleasantly styled and easy to navigate site** so that I can **enjoy the experience of using the site.**
