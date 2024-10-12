@@ -56,11 +56,13 @@ While these errors indicate areas for improvement in the HTML structure, they do
 ![CSS Validation Image](https://github.com/dhardi/gameshark/blob/main/static/images/css_validator.png)
 
 ##### JavaScript
-[Description of JavaScript validation]
 
-![Bag](https://github.com/dhardi/gameshark/blob/main/static/images/bag_java.png)
 
-![Country](https://github.com/dhardi/gameshark/blob/main/static/images/coutry_java.png)
+![Review](https://github.com/dhardi/gameshark/blob/main/static/images/add_review_java.png)
+
+![Testimonial](https://github.com/dhardi/gameshark/blob/main/static/images/add_testimonial_java.png)
+
+![Product](https://github.com/dhardi/gameshark/blob/main/static/images/produtcs_java.png)
 
 ##### Python - PEP8 Standards using `pycodestyle`
 [Adherence to Python's PEP8 coding standards by using the `pycodestyle` tool for validation. You can find screenshots of the tests in the link below.]
