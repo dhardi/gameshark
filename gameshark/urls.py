@@ -15,7 +15,7 @@ Including another URLconf
 """
 
 
-from gameshark.views import handler404
+from gameshark.views import handler404, handler500
 from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
@@ -34,5 +34,7 @@ urlpatterns = [
     path('reviews/', include('reviews.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-# Definindo handler404
+#  handler404 handler500
+
 handler404 = handler404
+handler500 = handler500
