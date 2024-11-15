@@ -23,15 +23,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY', '')
+SECRET_KEY = os.environ.get('SECRET_KEY', 'Veloster@123')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['8000-dhardi-gameshark-bhu4l2pphf2.ws.codeinstitute-ide.net','gameshark-4e405cfc132a.herokuapp.com','localhost']
+ALLOWED_HOSTS = ['8000-dhardi-gameshark-twntsvdfbof.ws.codeinstitute-ide.net','gameshark-4e405cfc132a.herokuapp.com','localhost']
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-dhardi-gameshark-bhu4l2pphf2.ws.codeinstitute-ide.net',
+    'https://8000-dhardi-gameshark-twntsvdfbof.ws.codeinstitute-ide.net',
 ]
 
 
