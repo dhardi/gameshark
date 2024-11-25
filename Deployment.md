@@ -31,7 +31,7 @@ Below are the steps I took to deploy the site to Heroku and any console commands
     * python -m venv .venv
 1. To ensure the virtual environment is not tracked by version control, add .venv to the .gitignore file.
 1. Install Django with version 3.2:
-    * ```pip install django==3.2.14```
+    * ```pip install django==4.2```
 1. Install gunicorn:
     * ```pip install gunicorn```
 1. Install supporting libraries:

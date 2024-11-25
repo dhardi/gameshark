@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', 'Veloster@123')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['8000-dhardi-gameshark-twntsvdfbof.ws.codeinstitute-ide.net','gameshark-4e405cfc132a.herokuapp.com','localhost']
 
