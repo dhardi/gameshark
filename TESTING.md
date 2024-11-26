@@ -291,10 +291,9 @@ Most of this epic were tasks for the development phase; therefore, the testing i
 |&check;| The list of products can be ordered by name ascending and descending.
 |&check;| The list of products can be ordered by price ascending and descending.
 |&check;| The list of products can be ordered by rating ascending and descending.
-|&check;| The list of products can be filtered to show only those with an active sale.
 |&check;| Add to cart button works as expected on all products and product details pages.
 
-|passed | **View individual product details** so that I can **identify the price, description, detailed reviews, and product image enabling me to compare how the product differs from other items.**
+|passed | **View individual product details** so that I can **identify the price, description, detailed reviews.**
 |:---:|:---|
 |&check;| The site has a product details page.
 |&check;| The product details page shows the product image.
@@ -343,21 +342,19 @@ Most of this epic were tasks for the development phase; therefore, the testing i
 |passed | **View reviews of a product** so that I can **see what other people think of a product.**
 |:---:|:---|
 |&check;| The site has a review section on the product detail page.
-|&check;| The review section shows the review title.
-|&check;| The review heading indicates the review rating.
-|&check;| The review heading previews the review body.
-|&check;| The review heading shows the review author.
-|&check;| The review heading indicates the review date.
-|&check;| The review edit/delete buttons only show to the author and super users.
+|&check;| The review section shows the review .
+|&check;| The review  indicates the review rating.
+|&check;| The review  previews the review body.
+|&check;| The review  shows the review author.
+|&check;| The review  indicates the review date.
+|&check;| The review edit/delete buttons only show to the author.
 |&check;| Accordion opens and closes when clicked.
-|&check;| Accordion only allows for one review to be expanded simultaneously to save display space.
-|&check;| If there are no reviews, then an inline form is shown in place of the accordion.
 |&check;| If reviews, there is a button below for the user to add a review.
 
 |passed | **Identify any promotions that are available** so that I can **take advantage of them and obtain the best value for money possible.**
 |:---:|:---|
-|&check;| The site has a promotions page.
-|&check;| The promotions page shows only active sales items.
+|&check;| The site has section Hot Deals.
+|&check;| The Hot Deals page shows only active sales items.
 
 |passed | **See clearly when something goes wrong on the site** so that I can **correct any errors and continue with my purchase.**
 |:---:|:---|
@@ -378,6 +375,9 @@ Most of this epic were tasks for the development phase; therefore, the testing i
 |&check; | The site has a nice checkout page.
 |&check; | The site has a pleasant promotions page.
 |&check; | Everything is aligned and spaced correctly.
+|&check; | The site has a nice Wishlist page.
+|&check; | The site has a nice Review of site page.
+
 
 
 
@@ -414,10 +414,9 @@ Most of this epic were tasks for the development phase; therefore, the testing i
 |passed | ...**Save my personal details to my profile from the checkout page** so that I **don’t have to enter them every time I make a purchase.**
 |:---:|:---|
 |&check;| The site has a profile page.
+|&check;| The use can upload an image on profile.
 |&check;| The profile page has a form to update the user's details.
 |&check;| Checkout form takes the information available in the profile for the checkout process
-|&check;| Details from checkout save if save info box checked
-|&check;| Details from checkout do not save if the save info box is not checked
 |&check;| Shipping address on previous order unaffected by updating details.
 
 |passed | **Amend my personal details from my profile** so that I can **update information should there be any changes.**
@@ -471,17 +470,11 @@ Most of this epic were tasks for the development phase; therefore, the testing i
 |:---:|:---|
 |&check;| Quantity can be selected on the product page.
 |&check;| Quantity can be selected on the product detail page.
-|&check;| User cannot set the quantity selector to more than the in-stock level
 |&check;| User cannot set the quantity selector to less than 1
-|&check;| User can set the quantity selector to the in-stock level
 |&check;| User can set the quantity selector to 1
 |&check;| User can use the plus and minus buttons to select the quantity.
 |&check;| User cannot add a quantity of 0 to the cart.
-|&check;| User cannot add more than the stock level to their cart.
-|&check;| server-side checks prevent the user from adding more than the stock level to their cart even if they change the input max value in the dev tools.
 |&check;| User receives a message if an item is added to the cart.
-|&check;| User receives a notification if the new quantity selected takes the cart's total number of items over the stock level.
-|&check;| Quantity selector is disabled if the product is out of stock.
 
 |passed | **View items in my bag to be purchased** so that I can **identify the total cost of my purchases before checkout.**
 |:---:|:---|
