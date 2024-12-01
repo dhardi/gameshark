@@ -33,6 +33,7 @@
 ## Future Features
 - Implement a recommendation system based on user behavior.
 - Create user roles with different permission levels (admin, seller, buyer).
+- adjusting the rating on items in the store after user leaves reviews 
 
 
 
