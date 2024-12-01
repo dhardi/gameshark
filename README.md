@@ -124,7 +124,9 @@ This **Entity-Relationship Diagram (ERD)** represents the structure of the e-com
 ## Product Detail
 ![Product Detail](https://github.com/dhardi/gameshark/blob/main/static/images/product_detail_wireframe.png)
 *Description:* Detailed view of a selected product, including images, descriptions, reviews, and the add-to-cart button.
+
 *Product rate:* its based on Metacritics , any other opnion you can find down below in Review section.  
+
 ---
 
 ## My Profile
