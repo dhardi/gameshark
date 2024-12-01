@@ -489,8 +489,6 @@ Most of this epic were tasks for the development phase; therefore, the testing i
 |&check;| The quantity of each item in the cart can be changed and updated from the cart page.
 |&check;| Total recalculates each time the quantity is adjusted.
 |&check;| User is shown a success/error message when the state changes in the cart.
-|&check;| User cannot set the quantity selector to more than the in-stock level
-|&check;| User cannot set the quantity selector to less than 1
 |&check;| User can set the quantity selector to 1.
 |&check;| User can use the plus and minus buttons to select the quantity.
 |&check;| User cannot add a quantity of 0 to the cart.
@@ -502,7 +500,6 @@ Most of this epic were tasks for the development phase; therefore, the testing i
 |&check;| The checkout page has a form to enter the user's shipping details.
 |&check;| Payments are handled by Stripe.
 |&check;| The checkout page has a button to complete the order.
-|&check;| The checkout page has a button to cancel the order and return the user to the shopping cart.
 |&check;| The checkout page has a button to save the user's details for future use.
 |&check;| If checked, the details from the checkout form are saved to the user's profile.
 |&check;| If it exists, the users saved details are pre-filled in the checkout form.
@@ -535,11 +532,10 @@ Most of this epic were tasks for the development phase; therefore, the testing i
 |&check;| The checkout page has a form to enter the user's payment details.
 |&check;| The checkout page has a form to enter the user shipping details.
 |&check;| The checkout page has a button to complete the order.
-|&check;| The checkout page has a button to cancel the order and return it to the shopping cart.
-|&check;| The checkout page has a button to save the user's details for future use.
+|&check;| The checkout page has a button adjust bag the order and return it to the shopping cart.
 |&check;| If checked, the details from the checkout form are saved to the user's profile.
 |&check;| If it exists, the users saved details are pre-filled in the checkout form.
-|&check;| Saved points the checkbox is unchecked by default.
+|&check;| Saved points the checkbox is checked by default.
 |&check;| Guest users are invited to register/sign in and warned that they could not view their order history online without registering.
 
 |passed | **securely submit my payment details** so that I can **rest assured my financial information is safe**
@@ -580,15 +576,14 @@ Most of this epic were tasks for the development phase; therefore, the testing i
 |&check;| Once successfully submitted, the review is visible on the product details page.
 |&check;| Author's name is in the accordion item heading.
 |&check;| Review title is in the accordion item heading.
-|&check;| Review text is previewed in the body of the accordion item.
+|&check;| Review text is previewed in the body of the accordion item also rate.
 
 |passed | **Edit my reviews of a product** so that I can **update my public opinion should it ever change*
 |:---:|:---|  
-|&check;| Review cannot be edited by a user who did not create the review (unless superuser) even by using the URL.  
+|&check;| Review cannot be edited by a user who did not create the review  even by using the URL.  
 |&check;| Edit review for is pre-populated with the review details.  
-|&check;| A superuser can edit all reviews.  
+|&check;| A superuser can edit all reviews on admin page.  
 |&check;| All reviews can be edited by the user who created the review.  
-|&check;| Overall rating is re-calculated when a review is edited.  
 
 |passed | **delete my reviews of a product** so that I can **remove previous reviews should I see fit**
 |:---:|:---|
