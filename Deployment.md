@@ -69,202 +69,140 @@ The below works on the assumption that you already have an account with [Heroku]
 
 ### **AWS S3 Bucket**
 
-The below works on the assumption that you already have an account with [AWS](https://signin.aws.amazon.com/signin?redirect_uri=https%3A%2F%2Fus-east-1.console.aws.amazon.com%2Fconsole%2Fhome%3FhashArgs%3D%2523%26isauthcode%3Dtrue%26nc2%3Dh_ct%26region%3Dus-east-1%26skipRegion%3Dtrue%26src%3Dheader-signin%26state%3DhashArgsFromTB_us-east-1_5ebca9aa1f981aaf&client_id=arn%3Aaws%3Asignin%3A%3A%3Aconsole%2Fcanvas&forceMobileApp=0&code_challenge=tXaJuB6g7gFkIttyTd75shZNQrYlt0B3-zdaKPesuQI&code_challenge_method=SHA-256) and are already signed in.
+### AWS Cloud Service
 
-1. Create a new S3 bucket:
-    * Click "Services" in the top left-hand corner of the landing page, click on "Storage" then click "S3."
-    * Click "Create bucket."
-    * Give the bucket a unique name:
-        * Will form part of the URL (in the case of this project, I called the S3 bucket pp5-gameshark)
-    * Select the nearest location:
-        * For me,  eu-north-1.
-    * Under the "Object Ownership" section, select "ACLS enabled"
-    * Under the "Block Public Access settings for this bucket" section, untick "Block all public access" and tick the box to acknowledge that this will make the bucket public.
-    * Click "Create bucket."
-1. Amend Bucket settings:
-    * Bucket Properties: -
-       * Click on the bucket name to open the bucket.
-       * Click on the "Properties" tab.
-       * Under the "Static website hosting" section, click "Edit."
-       * Under the "Static website hosting" section select "Enable".
-       * Under the "Hosting type" section ensure "Host a static website" is selected.
-       * Under the "Index document" section enter "index.html".
-       * Click "Save changes."
-    * Bucket Permissions: -
-       * Click on the "Permissions" tab.
-       * Scroll down to the "CORS configuration" section and click edit.
-       * Enter the following snippet into the text box:
+GameShark uses Amazon Web Services (AWS) to store static and media files securely in the cloud, ensuring fast and reliable access for our users.
 
-       ```JSON
-            [
-                {
-                    "AllowedHeaders": [
-                    "Authorization"
-                    ],
-                    "AllowedMethods": [
-                    "GET"
-                    ],
-                    "AllowedOrigins": [
-                    "*"
-                    ],
-                    "ExposeHeaders": []
-                }
-            ]
-        ```
+**To integrate AWS, follow steps:**
 
-       * Click "Save changes."
-       * Scroll back up to the "Bucket Policy" section and click "Edit."
-       * Take note of the "Bucket ARN" click on the "Policy Generator" button to open the AWS policy generator in a new tab.
-       * In the newly opened tab under Step 1 "Select Policy Type" select "S3 Bucket Policy." from the drop down menu.
-       * Under Step 2 "Add Statement(s)" enter " * " in the "Principal" text box.
-       * From the "s3:Action" drop down menu select "s3:GetObject".
-       * Enter the "ARN" noted from the bucket policy page into the "Amazon Resource Name (ARN)" text box.
-       * Click "Add Statement."
-       * Under Step 3 "Generate Policy" click "Generate Policy."
-       * Copy the resultant policy and paste it into the bucket policy text box on the previous tab.
-       * In the same text box add "/*" to the end of the resource key to allow access to all resources in this bucket.
-       * Click "Save changes."
-       * When back on the buckets permissions tab, scroll down to the "Access Control List" section and click "Edit."
-       * enable "List" for "Everyone (public access)", tick the box to accept that "I understand the effects of these changes on my objects and buckets."  and click "Save changes."
+#### **1. Create and Configure an S3 Bucket**
 
-1. Create AWS static files User and assign to S3 Bucket:
-    * Create "User Group": -
-        * Click "Services" in the top left-hand corner of the landing page, from the left side of the menu click on "Security, Identity, & Compliance" and select "IAM" from the right side of the menu.
-        * Under "Access management" click "User Groups."
-        * Click "Create Group."
-        * Enter a user name (in the case of this project, I called the user group "manage-pp5-gameshark").
-        * Scroll to the bottom of the page and click "Create Group."
-    * Create permissions policy for the new user group: -
-        * Click "Policies" in the left-hand menu.
-        * Click "Create Policy."
-        * Click "Import managed policy."
-        * Search for "AmazonS3FullAccess", select this policy, and click "Import".
-        * Click "JSON" under "Policy Document" to see the imported policy
-        * Copy the bucket ARN from the bucket policy page and paste it into the "Resource" section of the JSON snippet. Be sure to remove the default value of the resource key ("*") and replace it with the bucket ARN.
-        * Copy the bucket ARN a second time into the "Resource" section of the JSON snippet. This time, add "/*" to the end of the ARN to allow access to all resources in this bucket.
-        * Click "Next: Tags."
-        * Click "Next: Review."
-        * Click "Review Policy."
-        * Enter a name for the policy (in the case of this project, I called the policy "pp5-gameshark-policy").
-        * Enter a description for the policy.
-        * Click "Create Policy."
-    * Attach Policy to User Group: -
-        * Click "User Groups" in the left-hand menu.
-        * Click on the user group name created during the above step.
-        * Select the "Permissions" tab.
-        * click "Attach Policy."
-        * Search for the policy created during the above step, and select it.
-        * Click "Attach Policy."
-    * Create User: -
-        * Click "Users" in the left-hand menu.
-        * Click "Add user."
-        * Enter a "User name" (in the case of this project, I called the user "pp5-gameshark-staticfiles-user").
-        * Select "Programmatic access" and "AWS Management Console access."
-        * Click "Next: Permissions."
-        * Select "Add user to group."
-        * Select the user group created during the above step.
-        * Click "Next: Tags."
-        * Click "Next: Review."
-        * Click "Create user."
-        * Take note of the "Access key ID" and "Secret access key" as these will be needed to connect to the S3 bucket.
-        * Click "Download .csv" to download the credentials.
-        * Click "Close."
-1. Install required packages to used AWS S3 Bucket in Django:
-    * ```pip install boto3```
-    * ```pip install django-storages```
-1. Add 'storages' to the bottom of the installed apps section of settings.py file:
+1.  **Access AWS:**
+    
+    -   Go to [aws.amazon.com](https://aws.amazon.com/) and log in to your AWS Management Console.
+2.  **Create an S3 Bucket:**
+    
+    -   Search for "S3" in the AWS Management Console and create a new bucket.
+    -   Name the bucket to match your Heroku app name and select the region closest to your target audience.
+3.  **Set Public Access and Ownership:**
+    
+    -   Uncheck the "Block all public access" option and acknowledge that the bucket will be public (required for compatibility with Heroku).
+    -   Under "Object Ownership," ensure "ACLs enabled" and "Bucket owner preferred" are selected.
+4.  **Enable Static Website Hosting:**
+    
+    -   In the "Properties" tab, enable static website hosting.
+    -   Set `index.html` as the index document and `error.html` as the error document, then click "Save."
+5.  **Configure CORS (Cross-Origin Resource Sharing):**
+    
+    -   In the "Permissions" tab, add the following CORS configuration:
+    
+    json
+    
+    Copy code
+    
+    `[
+      {
+        "AllowedHeaders": ["Authorization"],
+        "AllowedMethods": ["GET"],
+        "AllowedOrigins": ["*"],
+        "ExposeHeaders": []
+      }
+    ]` 
+    
+    -   Copy your bucket's **ARN** (Amazon Resource Name).
 
-   ```python
-    INSTALLED_APPS = [
-    …,
-        'storages'
-    …,
-   ]
-   ```
-
-### **Creating Environmental Variables Locally**
-
-1. Install dotenv package:
-    * ```pip install python-dotenv```
-1. On your local machine, create a file called ".env" at the same level as settings.py and add this to the .gitignore file.
-1. From your projects settings.py file, copy the SECRET_KEY value and assign it to a variable called SECRET_KEY in your .env file
-    * ``` SECRET_KEY=PastedValueFromYourProjectsSettings.pyFile ```
-1. Add DEVELOPMENT variable to .env file:
-    * ``` DEVELOPMENT=development ```
-
-### **Setting up setting.py File**
-
-1. At the top of your settings.py file, add the following snippet immediately after the other imports:
-
-    ```python
-        import os
-        import dj_database_url
-        if os.path.isfile('gameshark/.env'):  
-            from dotenv import load_dotenv  
-            load_dotenv()
-
-        SECRET_KEY = os.environ.get("SECRET_KEY")
-        DEBUG = "DEVELOPMENT" in os.environ
-    ```
-
-1. Add a conditional in setting.py DATABASES section by replacing it with the following snippet to link up the Heroku Postgres server when in production and SQLite3 when developing locally:  
-
-    ``` python
-    if 'DATABASE_URL' in os.environ:
-       DATABASES = {
-           'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
-       }
-    else:
-       DATABASES = {
-           'default': {
-               'ENGINE': 'django.db.backends.sqlite3',
-               'NAME': BASE_DIR / 'db.sqlite3',
-           }
-       }
-    ```
-
-1. Tell Django to where to store media and static files by placing this snippet under the comments indicated below:
-
-    ``` python
-       # Static files (CSS, JavaScript, Images)
-       # https://docs.djangoproject.com/en/3.2/howto/static-files/
-       STATIC_URL = '/static/'
-       STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
-
-       MEDIA_URL = '/media/'
-       MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-    ```
-
-1. Import setting and static functions into the project settings.py file:
-
-    ``` python
-       from django.conf import settings
-       from django.conf.urls.static import static
-    ```
-
-1. Add the following snippet to the end of the urlpatterns list:
-
-    ``` python
-       urlpatterns =[
-            path('admin/', admin.site.urls),
-        ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-    ```
-
-1. Under the line with BASE_DIR, link templates directly in Heroku via settings.py:
-   * ``` TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates') ```
-
-1. Within TEMPLATES array, add ``` 'DIRS':[TEMPLATES_DIR] ``` like the below example:
-
-   ```python
-      TEMPLATES = [
-          {
-              …,
-              'DIRS': [TEMPLATES_DIR],
-              …,
-             
-           },
+6.  **Add a Bucket Policy:**
+    
+    -   Go to the "Bucket Policy" tab and click on the "Policy Generator" link.
+    -   Configure the policy:
+        -   **Policy Type:** S3 Bucket Policy
+        -   **Effect:** Allow
+        -   **Principal:** *
+        -   **Actions:** `s3:GetObject`
+        -   **ARN:** Paste your bucket's ARN
+    -   Click "Add Statement" and "Generate Policy."
+    -   Copy the generated policy and paste it into the "Bucket Policy Editor":
+    
+    json
+    
+    Copy code
+    
+    ```{
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Effect": "Allow",
+          "Principal": "*",
+          "Action": "s3:GetObject",
+          "Resource": "arn:aws:s3:::your-bucket-name/*"
+        }
       ]
-   ```
+    }```
+    
+    -   Ensure the `Resource` field ends with `/*` and click "Save."
+7.  **Adjust Access Control List (ACL):**
+    
+    -   In the "Access Control List" (ACL) section, click "Edit" and enable "List" for Everyone (public access). Accept the warning prompt.
+    -   If the edit option is disabled, ensure the "Object Ownership" settings have ACLs enabled.
+
+#### **2. Configure IAM (Identity and Access Management):**
+
+1.  **Create a User Group:**
+    
+    -   Navigate to the IAM service and select "User Groups."
+    -   Click "Create New Group," and name it appropriately (e.g., `group-gameshark`).
+2.  **Attach Policies to the Group:**
+    
+    -   Select the newly created group and go to the "Permissions" tab.
+    -   Click "Add Permissions" > "Attach Policies."
+    -   In the "JSON" tab, click "Import Managed Policy" and search for `AmazonS3FullAccess`.
+    -   Import the policy and modify it to limit access to your specific bucket:
+    
+    json
+    
+    Copy code
+    
+    ```{
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Effect": "Allow",
+          "Action": "s3:*",
+          "Resource": [
+            "arn:aws:s3:::your-bucket-name",
+            "arn:aws:s3:::your-bucket-name/*"
+          ]
+        }
+      ]
+    }```
+    
+    -   Click "Review Policy" and name it (e.g., `policy-gameshark`), then click "Create Policy."
+3.  **Add Users and Assign Permissions:**
+    
+    -   Go back to "User Groups," select your group, and click "Attach Policy."
+    -   Select your custom policy (e.g., `policy-gameshark`) and attach it.
+    -   Click "Add User" and name it appropriately (e.g., `user-gameshark`).
+    -   Select "Programmatic Access" and add the user to your group.
+    -   Download the CSV file containing the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`.
+
+#### **3. Final AWS Setup and Heroku Integration:**
+
+1.  **Update Heroku Configurations:**
+    
+    -   Remove `DISABLE_COLLECTSTATIC` from Heroku Config Vars to enable AWS management of static files.
+2.  **Create Media Directory:**
+    
+    -   Within your S3 bucket, create a new folder named `media`.
+    -   Upload your media files into this folder and set "Public read access."
+3.  **Security Reminder:**
+    
+    -   Ensure all sensitive information (like AWS credentials) is securely stored and not hard-coded into your source code.
+
+----------
+
+***Summary***
+
+These steps integrate AWS S3 with your Heroku-hosted application, enabling efficient management of static and media files in a secure and scalable cloud environment. Proper configuration ensures that your content is readily accessible while adhering to best practices in cloud security and management.
 
 1. Link S3 Bucket to Django Project by adding the following to the settings.py file:
 
