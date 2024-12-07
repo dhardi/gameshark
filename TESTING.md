@@ -374,7 +374,6 @@ Most of this epic were tasks for the development phase; therefore, the testing i
 |&check; | The site has a pleasant product detail page.
 |&check; | The site has a nice cart page.
 |&check; | The site has a nice checkout page.
-|&check; | The site has a pleasant promotions page.
 |&check; | Everything is aligned and spaced correctly.
 |&check; | The site has a nice Wishlist page.
 |&check; | The site has a nice Review of site page.
